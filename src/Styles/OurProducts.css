@@ -1,0 +1,28 @@
+.Our-product-cor-con {
+    display: flex;
+    position: absolute;
+    left: 33.5%;
+    bottom: -48px;
+}
+
+.product-cor-con{
+    height: 85vh;
+    margin-top: 6px;
+}
+.bottom img {
+    width: 100%;
+}
+
+.Our-products {
+    position: relative;
+}
+
+.paint-fly {
+    display: flex;
+    justify-content: center;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 90px;
+}

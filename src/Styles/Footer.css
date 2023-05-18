@@ -1,0 +1,120 @@
+.footer-container{
+    /* display: flex;
+    justify-content: space-evenly;
+    background-color: var(--blue);
+    align-items: center;
+    padding: 100px 0px;
+    color: white;
+    flex-wrap: wrap; */
+
+    background-color: var(--blue);
+    align-items: center;
+    padding: 30px 6%;
+    color: white;
+}
+.footer-logo{
+    height: 110px;
+}
+.footer-logo img{
+    height: 100%;
+}
+.footer-address{
+    width: 250px;
+    line-height: 1.5;
+}
+ .footer-container {
+    line-height: 1.7;
+    font-size: 17px;
+    font-weight: 100;
+}
+.footer-container .Head{
+    line-height: 2;
+    font-size: 25px;
+    /* font-weight: 600; */
+}
+
+.links{
+    width: 18%;
+}
+.footer-container .support{
+    border-right: 3px solid;
+    width: 28%;
+}
+.wtb{
+    margin-left: 5%;
+    width: 30%;
+}
+.links-content{
+    display: flex;
+}
+.footer-container .cont{
+    padding: 5px 0;
+}
+.footer-container .cont p{
+    display: flex;
+    align-items: center;
+}
+.footer-container .cont img{
+    height: 40px;
+    margin-right: 20px;
+}
+.footer-container .address{
+    margin-top: 20px;
+}
+
+
+.wtbInput {
+    height: 50px;
+}
+.wtbInput input::placeholder {
+    color: #999;
+    font-size: 17px;
+    font-weight: 100;
+    font-family: 'Comfortaa', 'cursive';
+}
+.wtbInput input[type=text] {
+    color: #999;
+    font-size: 17px;
+    font-weight: 100;
+    font-family: 'Comfortaa', 'cursive';
+
+
+    border-radius: 25px 0 0 25px;
+    padding: 12px;
+    font-size: 17px;
+    border: 1px solid rgb(250, 249, 249);
+    float: left;
+    width: 70%;
+    height: 49%;
+  }
+  
+  .wtbInput button {
+    border-radius: 0 25px 25px 0;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #f8d928;
+    color: rgb(251, 156, 3);
+    font-size: 17px;
+    border: 1px solid rgb(251, 250, 250);
+    border-left: none;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  p a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+ 
+
+
+
+
+@media (max-width: 768px) {
+    .footer-logo{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,45 @@
+.bottom-con img {
+  width: 100%;
+}
+
+.product-cor-images {
+  display: flex;
+  overflow: hidden;
+  margin-left: 500px;
+}
+
+.p2 {
+  font-weight: 700;
+  font-size: 18px;
+  color: black;
+}
+
+.product-cor-con p {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  color: #146ab0;
+  text-align: center;
+}
+
+.bottom-con {
+  position: relative;
+  top: -244px;
+  z-index: -1;
+}
+
+.orosel-cardd img {
+  transform: scale(0.7);
+  width: 550px;
+}
+
+.orosel-cardd.active img {
+  transform: scale(0.96);
+  width: 550px;
+}
+
+@media (max-width: 768px) {
+  .bottom-con {
+    top: -26%;
+  }
+}

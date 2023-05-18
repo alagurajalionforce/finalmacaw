@@ -1,0 +1,138 @@
+.section-gap {
+    margin-top: 5px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.about-us {
+    position: relative;
+}
+
+.about-us .mask-img {
+    /* -webkit-filter: brightness(0.5); */
+    /* filter: brightness(0.5); */
+    position: absolute;
+    filter: brightness(100%) contrast(100%);
+}
+
+.about-us p {
+    position: absolute;
+    top: 27%;
+    /* left: 28%; */
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 149%;
+    color: #ffffff;
+}
+
+.color-list-card {
+    width: 110px;
+    height: 110px;
+    border-radius: 15px;
+    border: 4px solid #E0E0E0;
+    margin: 0px 30px;
+
+}
+
+.box {
+
+    /* background: red; */
+    height: 15rem;
+    margin: 4rem;
+    width: 17rem;
+
+}
+
+.boxActive {
+    /* border: 2px solid #ff6550; */
+    background: #f79e9e;
+    /* background: red; */
+    height: 15rem;
+    margin: 4rem;
+    width: 17rem;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+
+.box p {
+    margin-top: -30px;
+}
+
+.content {
+    /* position: absolute; */
+    width: 1073px;
+    height: 900px;
+    left: calc(50% - 1073px/2 + 0.5px);
+    top: 1010px;
+    margin-left: 14rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    background: #B9D2E7;
+    box-shadow: 0px 0px 15px 5px rgba(20, 106, 176, 0.3);
+    border-radius: 26px;
+}
+.features{
+    /* margin-left: 30rem;
+     */
+     display: flex;
+     justify-content: center;
+    color:  #FFFFFF;
+    font-weight: 700;
+font-size: 24px;
+margin:1rem
+    ;
+}
+
+.heading {
+    height: 30rem;
+    display: flex;
+    width: 63rem;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    align-content: stretch;
+    justify-content: space-evenly;
+
+}
+
+.side {
+    width: 21rem;
+    margin-left: 23rem;
+    margin-top: 9rem;
+    font-size: 17px;
+    color: #0D3E66;
+}
+
+.details {
+    margin-top: -14rem;
+    margin-left: 3rem;
+    height: 182px;
+    width: 62rem;
+    /* background: red; */
+    padding: 4rem;
+    color: #0D3E66;
+    line-height: 20px;
+    text-align: center;
+
+}
+.imgHead p {
+    margin-left: 19px;
+    margin-top: 25px;
+    color: #0D3E66;
+
+
+}
+
+.img {
+    /* background-color: red; */
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.img1 {
+    height: 11rem;
+
+}

@@ -1,0 +1,353 @@
+.BG-img img {
+    width: 100%;
+  }
+  
+  .BG-img {
+    position: relative;
+  }
+  .bannerText {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    /* display: flex; */
+    z-index: 1;
+    top: 63%;
+    /* left: 20%; */
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 84px;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #1872bb;
+  }/* 
+  .BG-img p {
+    position: absolute;
+    z-index: 1;
+    top: 43%;
+    left: 20%;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 84px;
+    color: #ffffff;
+  
+    text-shadow: 0px 0px 10px #1872bb;
+  } */
+  .slider {
+    position: absolute;
+    display: flex;
+    bottom: 50px;
+    left: 50%;
+    height: 66px;
+    top: 95%;
+    width: 423px;
+    transform: translateX(-50%);
+    flex-direction: column;
+  }
+  
+  .slider::after {
+    content: "Slide to Paint";
+    position: absolute;
+    width: 170px;
+    top: 24px;
+    left: 127px;
+    font-size: 24px;
+  }
+  
+  .Products-container {
+    width: 100%;
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    width: 423px;
+    height: 66px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 46.5px;
+  }
+  
+  .slider-close {
+    height: 64px;
+    background: linear-gradient(90deg, #ffffff 0%, #146ab0 100%);
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-top: -68px;
+    z-index: 1;
+    left: 10px;
+    width:423px;
+    position: relative;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("../Images/bird\ 2.png");
+    background-size: "contain";
+    background-repeat: no-repeat;
+    background-color: var(--yellow);
+    width: 94px;
+    height: 64px;
+    border-radius: 40px;
+    position: relative;
+    border: 4px solid #146ab0;
+    background-position: center;
+    background-size: 20px 20px;
+    z-index: 2;
+    margin-left: -3px;
+  }
+  
+  .slide-close-con {
+    width: 390px;
+    /* background-color: blue; */
+    border-radius: 50%;
+  }
+  
+  .products-body {
+    background-color: var(--white);
+    /* margin-top: 360px; */
+  }
+  
+  .products-body img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(100%) contrast(100%);
+  }
+  
+  .yellow-banner-con {
+    height: 460px;
+    /* margin-top: 87px; */
+  }
+  
+  .products-body {
+    position: relative;
+  }
+  
+  .yellow-ban-data img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  .yellow-ban-data {
+    z-index: 2;
+    position: absolute;
+    /* top: 88px; */
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .banner-card {
+    width: 190px;
+    text-align: center;
+  }
+  
+  .banner-card-first {
+    width: 100px;
+    margin-left: 80px;
+  }
+  
+  .banner-card-first h1 {
+    font-size: 70px;
+    font-weight: bold !important;
+    color: white;
+    margin-left: -60px;
+  }
+  
+  .banner-card p {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+  }
+  
+  .submit-con {
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 25px -3px rgb(234, 217, 166);
+    background-color: white;
+  }
+  .contact-con {
+    width: 80%;
+    border-radius: 20px;
+   
+  }
+  .typetwo {
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid #c0c0c0 !important;
+    margin-right: 20px;
+    outline: none;
+    margin-bottom: 40px;
+  }
+  
+  .typeone {
+    width: 500px;
+    border: none;
+    border-bottom: 2px solid #c0c0c0 !important;
+    margin-right: 20px;
+    outline: none;
+    margin-bottom: 40px;
+  }
+  
+  .input-set-one {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input-set-two {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .submit-cards {
+    padding: 37px 60px 20px 60px;
+    /* background-color: white; */
+  }
+  
+  .submit-btn {
+    text-align: center;
+  }
+  
+  .submit-btn button {
+    padding: 8px 25px;
+    border: 1px solid red;
+    color: white;
+    border-radius: 7px;
+    background-color: #E82B2D;
+    font-size: 18px;
+    margin-bottom: 50px;
+    font-family: 'Comfortaa';
+  
+  }
+  
+  .submit-con {
+    position: relative;
+    top: -70px;
+    z-index: 2;
+  }
+  
+  .sub-con-cen {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cpr-card-one {
+    animation: move 3s infinite;
+  }
+  .cpr-card-two {
+    animation: center 3s infinite;
+    animation-delay: 3s;
+  }
+  .cpr-card-three {
+    position: absolute;
+    left: -500px;
+    animation: hide 3s infinite;
+    animation-delay: 0.3s;
+  }
+  /* @keyframes move {
+      0% {
+          transform: translateX(0px) scale(1);
+  
+  
+      }
+  
+      100% {
+          transform: translateX(-680px) scale(0.7);
+  
+      }
+  }
+  @keyframes center {
+      0% {
+          transform: translateX(0px) scale(0.7) 
+      }
+      30%{
+          transform: translateX(-50px) scale(0.7);
+      }
+      70%{
+          transform: translateX(-250px) scale(0.7);
+      }
+      100% {
+          transform: translateX(-547px) scale(1);
+          margin-top: 96px;
+  
+      }
+  }
+  
+  @keyframes hide{
+      0% {
+          transform: translateX(0px) scale(1);
+  
+  
+      }
+  
+      100% {
+          transform: translateX(-680px) scale(0.5);
+  display: none;
+      }
+  } */
+  
+  /* popupstyle */
+  
+  /* popupstyle */
+  
+  .ourstory{
+    margin-bottom: 5%;
+  }
+  .ourstory p{
+    margin: 0 7%;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    color: #146ab0;
+    text-align: center;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .yellow-ban-data div {
+      transform: scale(0.7);
+  }
+  .banner-card-first h1{
+    font-size: 48px;
+  }
+  .banner-card {
+    width: 25%;
+  }
+    .BG-img p{
+      font-size: 37px;
+      top: 35%;
+      left: 19%;
+    }
+    .submit-con{
+      margin-bottom: 50px;
+      top: 0;
+      width: 93%;
+      margin-top: 0px;
+    }
+    .slider{
+      top: 52%;
+      transform: translateX(-50%) scale(0.6);
+    }
+    .submit-con input{
+      font-size: 12px;
+    }
+    .typeone{
+      width: 40%;
+    }
+    .typetwo{
+      width: 30%;
+    }
+    .submit-cards{
+      padding: 37px 20px 20px 20px;
+    }
+    .submit-btn button{
+      margin-bottom: 20px;
+    }
+  
+  }
+  
