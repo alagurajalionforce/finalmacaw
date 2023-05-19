@@ -67,7 +67,7 @@ const ProductsList = () => {
     setIsDragging(false)
   }
   const handleClick = (cardId) => {
-    setActiveName(colors[cardId].name)
+    setActiveName(colors[cardId - 1].name)
     const updatedCards = colors.map((card) =>
       card.id === cardId
         ? { ...card, isActive: true }

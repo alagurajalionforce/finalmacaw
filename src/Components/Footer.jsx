@@ -15,7 +15,10 @@ const Footer = () => {
         </div>
         <div className='links-content'>
           <div className="links">
-            <div className="set-one" style={{paddingTop:"10px"}}>
+          <div className="Head">
+              <p>Quick links</p>
+            </div>
+            <div className="set-one" /* style={{paddingTop:"10px"}} */>
               <p><a href='/About'>About Us</a></p>
             </div>
             <div className="set-one">
