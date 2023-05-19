@@ -27,20 +27,22 @@ const ProductsList = () => {
     },
     {
       id: 2,
-      name: 'Interior UnderCoat',
+      name: 'Acrylic Putty',
       img: BucketFive,
       isActive: false,
       background: '#f79e9e',
     },
-    { id: 3, name: 'Interior UnderCoat', img: BucketTwo, isActive: false },
-    { id: 4, name: 'Interior UnderCoat', img: BucketThree, isActive: false },
-    { id: 5, name: 'Interior UnderCoat', img: BucketFour, isActive: false },
+    { id: 3, name: 'Aura Prime Luxury Interior Emulsion', img: BucketTwo, isActive: false },
+    { id: 4, name: 'Swoosh Luxury Emulsion', img: BucketThree, isActive: false },
+    { id: 5, name: 'Chromagic Premium Emulsion', img: BucketFour, isActive: false },
   ]
   const containerRef = useRef(null)
   const [isDragging, setIsDragging] = useState(false)
   const [startX, setStartX] = useState(0)
   const [offsetX, setOffsetX] = useState(0)
   const [active, setActive] = useState(colors)
+
+  const [activeName, setActiveName] = useState(colors[0].name)
 
   const handleMouseDown = (e) => {
     setIsDragging(true)
@@ -65,6 +67,7 @@ const ProductsList = () => {
     setIsDragging(false)
   }
   const handleClick = (cardId) => {
+    setActiveName(colors[cardId].name)
     const updatedCards = colors.map((card) =>
       card.id === cardId
         ? { ...card, isActive: true }
@@ -156,16 +159,15 @@ const ProductsList = () => {
                 height: '45rem',
                 // display: 'flex',
                 padding: '15px',
-                marginTop: '-209px',
-                marginLeft: '-3rem',
+                marginTop: '-188px',
                 position: 'absolute',
                 top: '56rem',
-                marginLeft: '-38rem',
+                marginLeft: '-33rem',
               }}
               src={BucketOne}
             />
             <div className="side">
-              <p>Interior Undercoat</p>
+              <p className='headline'>{activeName}</p>
               <p>
                 Amendo and Dura Fill interior primer (Premium & Economy quality)
               </p>

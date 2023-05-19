@@ -290,3 +290,46 @@ width: 60%;
   display: block;
   margin-bottom: 35px;
 }
+
+
+
+
+.contact-detail {
+  display: flex;
+  justify-content: center;
+}
+.contact-detail .Head{
+  line-height: 3;
+  font-size: 25px;
+  /* font-weight: 600; */
+}
+
+.links{
+  width: 18%;
+}
+.contact-detail .support{
+  /* border-right: 3px solid; */
+  width: 28%;
+}
+.wtb{
+  margin-left: 5%;
+  width: 30%;
+}
+.links-content{
+  display: flex;
+}
+.contact-detail .cont{
+  padding: 5px 0;
+}
+.contact-detail .cont p{
+  display: flex;
+  align-items: center;
+}
+.contact-detail .cont img{
+  height: 40px;
+  margin-right: 20px;
+}
+ .contact-detail .address{
+  line-height: 1.9;
+} 
+

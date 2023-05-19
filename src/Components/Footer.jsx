@@ -33,10 +33,10 @@ const Footer = () => {
               <p><a href='/productsList'>Interior</a></p>
             </div>
             <div className="set-one">
-              <p>Extorior</p>
+              <p>Exterior</p>
             </div>
             <div className="set-one">
-              <p>Woods & Metal</p>
+              <p>Wood & Metal</p>
             </div>
           </div>
           <div className="support">

@@ -4,9 +4,9 @@ import contact from '../Images/Mask group (3).png'
 import '../Styles/About.css'
 import '../Styles/Products.css'
 
-import fc from "../Images/fc.png"
-import fw from "../Images/fw.png"
-import fm from "../Images/fm.png"
+import fc from "../Images/cc.png"
+import fw from "../Images/cw.png"
+import fm from "../Images/cm.png"
 function ContactUs() {
   return (
     <div>
@@ -52,12 +52,12 @@ function ContactUs() {
           </div>
         </div>
       </section>
-      {/* <section >
+      <section >
 
           <div className='contact-detail'>
               <div className="support">
                 <div className="Head">
-                  <p>Support</p>
+                  <p>Contact</p>
                 </div>
                 <div className="cont">
 
@@ -74,6 +74,9 @@ function ContactUs() {
               </div>
 
                 <div className="address">
+                <div className="Head">
+                  <p>Address</p>
+                </div>
                   <p>Premises no.03-319, DH-6/11,
                     <br/>
                     Action Area-1D, Street No. 319,
@@ -83,8 +86,10 @@ function ContactUs() {
 
           </div>
 
-
-      </section> */}
+          <br/>
+          <br/>
+          <br/>
+      </section>
      {/*  <section>
         <div className="map-section">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
