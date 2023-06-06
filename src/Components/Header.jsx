@@ -42,7 +42,7 @@ function Header() {
 
 
   return (
-    <div>
+    <div className="z-50">
       <header className="Nav-container Header">
         <div className="logo">
         <NavLink to="/"><img src={Logo} alt=""/></NavLink>

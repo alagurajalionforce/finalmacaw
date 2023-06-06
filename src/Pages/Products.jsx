@@ -27,7 +27,7 @@ function Products() {
         <p className="absolute top-[45%] left-[17%] text-[#146AB0] font-light text-sm md:text-2xl lg:text-4xl xl:text-6xl">
           Products
         </p>
-        <img src={banner} className="w-full" />
+        <img src={banner} className="w-full bg-white" />
       </div>
       <div className="container flex flex-col items-center">
         <div
