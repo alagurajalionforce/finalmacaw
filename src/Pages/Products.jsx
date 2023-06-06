@@ -11,34 +11,42 @@ import ppb1 from "../Images/ppb1.jpg";
 import ppb2 from "../Images/ppb2.jpg";
 import ppb3 from "../Images/ppb3.jpg";
 
-import banner from "../Images/product-banner.png";
+import banner from "../Images/ProductBanner.png";
 import { useNavigate } from "react-router-dom";
+import React from "react";
+
 function Products() {
   const navigate = useNavigate();
   return (
-    <div className="container flex flex-col items-center">
-      <div className="mt-10 flex w-5/5 lg:w-4/5 h-36 md:h-52 lg:h-64 rounded-lg cursor-pointer">
-        <img className="rounded-l-lg w-1/2 aspect-square" src={ppb1} />
-        <div className="transition duration-500 ease-in-out pl-3 flex flex-col justify-center w-1/2 bg-[#146AB0] rounded-l-none rounded-lg hover:bg-white hover:border-[#146AB0] hover:border-[5px] hover:border-l-0 hover:text-[#146AB0] text-white">
-          <p className="text-xs lg:text-lg font-light">World of</p>
-          <p className="text-sm lg:text-xl">Interior Emulsion</p>
+    <React.Fragment>
+      <div className="relative">
+        <p className="absolute top-20 md:top-1/2 text-[#146AB0] font-semibold text-lg md:text-3xl lg:text-5xl left-14 md:left-28 lg:left-48">Products</p>
+      <img src={banner} className="w-full" />
+      </div>
+      <div className="container flex flex-col items-center">
+        <div className="mt-10 flex w-5/5 lg:w-4/5 h-36 md:h-52 lg:h-64 rounded-lg cursor-pointer">
+          <img className="rounded-l-lg w-1/2 aspect-square" src={ppb1} />
+          <div className="transition duration-500 ease-in-out pl-3 flex flex-col justify-center w-1/2 bg-[#146AB0] rounded-l-none rounded-lg hover:bg-white hover:border-[#146AB0] hover:border-[5px] hover:border-l-0 hover:text-[#146AB0] text-white">
+            <p className="text-xs lg:text-lg font-light">World of</p>
+            <p className="text-sm lg:text-xl">Interior Emulsion</p>
+          </div>
+        </div>
+        <div className="mt-10 flex w-5/5 lg:w-4/5 h-36 md:h-52 lg:h-64 rounded-lg cursor-pointer">
+          <div className=" transition duration-500 ease-in-out pl-10 flex flex-col justify-center w-1/2 bg-[#F6B218] rounded-r-none rounded-lg hover:bg-white hover:border-[#F6B218] hover:border-[5px] hover:border-r-0 hover:text-[#F6B218] text-white">
+            <p className="text-xs lg:text-lg font-light">World of</p>
+            <p className="text-sm lg:text-xl">Exterior Emulsion</p>
+          </div>
+          <img className="rounded-r-lg w-1/2 aspect-square" src={ppb1} />
+        </div>
+        <div className="mt-10 flex w-5/5 lg:w-4/5 h-36 md:h-52 lg:h-64 rounded-lg cursor-pointer">
+          <img className="rounded-l-lg w-1/2 aspect-square" src={ppb1} />
+          <div className="transition duration-500 ease-in-out pl-3 flex flex-col justify-center w-1/2 bg-[#CC402B] rounded-l-none rounded-lg hover:bg-white hover:border-[#CC402B] hover:border-[5px] hover:border-l-0 hover:text-[#CC402B] text-white">
+            <p className="text-xs lg:text-lg font-light">World of</p>
+            <p className="text-sm lg:text-xl">Wood & Metal</p>
+          </div>
         </div>
       </div>
-      <div className="mt-10 flex w-5/5 lg:w-4/5 h-36 md:h-52 lg:h-64 rounded-lg cursor-pointer">
-        <div className="transition duration-500 ease-in-out pl-3 flex flex-col justify-center w-1/2 bg-[#F6B218] rounded-r-none rounded-lg hover:bg-white hover:border-[#F6B218] hover:border-[5px] hover:border-r-0 hover:text-[#F6B218] text-white">
-          <p className="text-xs lg:text-lg font-light">World of</p>
-          <p className="text-sm lg:text-xl">Exterior Emulsion</p>
-        </div>
-        <img className="rounded-r-lg w-1/2 aspect-square" src={ppb1} />
-      </div>
-      <div className="mt-10 flex w-5/5 lg:w-4/5 h-36 md:h-52 lg:h-64 rounded-lg cursor-pointer">
-        <img className="rounded-l-lg w-1/2 aspect-square" src={ppb1} />
-        <div className="transition duration-500 ease-in-out pl-3 flex flex-col justify-center w-1/2 bg-[#CC402B] rounded-l-none rounded-lg hover:bg-white hover:border-[#CC402B] hover:border-[5px] hover:border-l-0 hover:text-[#CC402B] text-white">
-          <p className="text-xs lg:text-lg font-light">World of</p>
-          <p className="text-sm lg:text-xl">Wood & Metal</p>
-        </div>
-      </div>
-    </div>
+    </React.Fragment>
     // <div>
     //   {/* aboutus baner start */}
     //   <section className="section-gap">
