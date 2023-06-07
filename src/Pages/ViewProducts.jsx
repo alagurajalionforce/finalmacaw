@@ -112,7 +112,7 @@ const ViewProducts = () => {
           font_color: "#475A1D",
           accent_color: "#0DB14B",
           image: Bucket2,
-          bird: YellowBird,
+          bird: RedBird,
         },
         {
           paint_name: "Aura Prime Luxury Interior Emulsion",
@@ -134,7 +134,7 @@ const ViewProducts = () => {
           font_color: "#6D0C2C",
           accent_color: "#DE618B",
           image: Bucket4,
-          bird: YellowBird,
+          bird: RedBird,
         },
         {
           paint_name: "Chromagic Premium Emulsion",
@@ -149,15 +149,14 @@ const ViewProducts = () => {
         },
         {
           paint_name: "Dura Smooth Emulsion",
-          paint_subheading:
-            "Economy quality",
+          paint_subheading: "Economy quality",
           paint_description:
             "Tired of having to repaint your walls every few months? With Dura Smooth's Interior Emulsion, you can forget that problem! This easy-to-apply product features fast drying times and a longer life span than traditional distemper or cement paint. Not only is it more effective in terms of coverage but also boasts anti-fungal properties to protect against bacteria growth - perfect for those who are investing long term into their interior design schemes.",
           background_color: "#FFEDC3",
           font_color: "#855E07",
           accent_color: "#F6B218",
           image: Bucket6,
-          bird: YellowBird,
+          bird: RedBird,
         },
       ],
     },
@@ -246,7 +245,11 @@ const ViewProducts = () => {
                 {/* Bird */}
                 <img
                   src={productInfo[productType].products[activeIndex].bird}
-                  className="absolute w-1/2 scale-x-[-1.25] scale-125 origin-top -left-1/4 -top-[18%] xl:scale-x-[-0.50] xl:scale-50 xl:-left-1/4 xl:-top-16 md:scale-x-[-0.50] md:scale-50 md:-left-1/4 md:-top-12"
+                  className={
+                    activeIndex % 2 == 0
+                      ? `absolute w-1/2 scale-x-[-1.25] scale-125 origin-top -left-1/4 -top-[18%] xl:scale-x-[-0.50] xl:scale-50 xl:-left-1/4 xl:-top-16 md:scale-x-[-0.50] md:scale-50 md:-left-1/4 md:-top-12`
+                      : `absolute w-3/12 scale-x-[-1.25] scale-125 origin-top -top-[30%] left-[10%] md:-left-[3%] md:-top-[15%] lg:-top-[18%] xl:scale-x-[-0.50] xl:scale-50 md:scale-x-[-0.50] md:scale-50 `
+                  }
                 />
                 {/* Bucket */}
                 <img
