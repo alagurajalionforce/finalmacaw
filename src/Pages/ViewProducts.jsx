@@ -17,6 +17,7 @@ const ViewProducts = () => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
+    console.log("The type", queryParams.get("type"))
     setProductType(queryParams.get("type"));
   }, [location]);
 
@@ -48,7 +49,7 @@ const ViewProducts = () => {
                 className={`ml-10 relative mt-28 w-48 flex-shrink-0 p-3 rounded-lg`}
                 key={index}
                 style={{
-                  backgroundColor: activeIndex === index && info.activeBgColor,
+                  background: activeIndex === index && info.activeBgColor,
                 }}
               >
                 <img
@@ -84,7 +85,7 @@ const ViewProducts = () => {
           <div
             className={`mt-12 p-6 mb-10 w-9/12 rounded-lg pb-16 text-center`}
             style={{
-              backgroundColor:
+              background:
                 productInfo[productType].products[activeIndex].background_color,
             }}
           >

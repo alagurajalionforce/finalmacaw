@@ -1,5 +1,4 @@
-//Imports of Splashes
-
+//Imports of Interior Splashes
 import Splash1 from "../Images/InteriorProducts/Splash/Splash1.png";
 import Splash2 from "../Images/InteriorProducts/Splash/Splash 2.png";
 import Splash3 from "../Images/InteriorProducts/Splash/Splash 3.png";
@@ -7,13 +6,35 @@ import Splash4 from "../Images/InteriorProducts/Splash/Splash 4.png";
 import Splash5 from "../Images/InteriorProducts/Splash/Splash 5.png";
 import Splash6 from "../Images/InteriorProducts/Splash/Splash 6.png";
 
-//Imports of bucket images
+//Imports of Exterior Splashes
+import Splash7 from "../Images/InteriorProducts/Splash/Splash 7.png";
+import Splash8 from "../Images/InteriorProducts/Splash/Splash 8.png";
+import Splash9 from "../Images/InteriorProducts/Splash/Splash 9.png";
+import Splash10 from "../Images/InteriorProducts/Splash/Splash 10.png";
+
+//Imports of Wood & Metal Splashes
+import Splash11 from "../Images/InteriorProducts/Splash/Splash 11.png";
+import Splash12 from "../Images/InteriorProducts/Splash/Splash 12.png"
+import Splash13 from "../Images/InteriorProducts/Splash/Splash 13.png"
+
+//Imports of Interior bucket images
 import Bucket1 from "../Images/PaintBuckets/Interior - Undercoat – Amendo and Dura Fill interior primer Small.png";
 import Bucket2 from "../Images/PaintBuckets/Interior - Acrylic Putty Small.png";
 import Bucket3 from "../Images/PaintBuckets/Interior - Aura Prime Luxury Interior Emulsion Small.png";
 import Bucket4 from "../Images/PaintBuckets/Interior - Swoosh Luxury Emulsion Small.png";
 import Bucket5 from "../Images/PaintBuckets/Interior - Chromagic  Premium Emulsion Small.png";
 import Bucket6 from "../Images/PaintBuckets/Interior - Dura smooth Emulsion Small.png";
+
+//Imports of Exterior bucket images
+import Bucket7 from "../Images/PaintBuckets/Exterior - Undercoat – Amendo and Dura Fill Small.png";
+import Bucket8 from "../Images/PaintBuckets/Exterior - Climate Care Xtra Life 7 Exterior Emulsion Small.png";
+import Bucket9 from "../Images/PaintBuckets/Exterior - Climate care shine Life 5 Years -Luxury Category Small.png";
+import Bucket10 from "../Images/PaintBuckets/Exterior - Life coat Emulsion -Economy Category Small.png";
+
+//Imports of Wood & Metal bucket images
+import Bucket11 from "../Images/PaintBuckets/Wood - Macaw Red Oxide Primer Small.png";
+import Bucket12 from "../Images/PaintBuckets/Wood - MACAW TruGlow Satin Enamel Small.png";
+import Bucket13 from "../Images/PaintBuckets/Wood - Macaw solvent base Tru Glow High Gloss Enamel Small.png";
 
 // Product Type
 import Interior from "../Images/Banners/Interior.png";
@@ -85,6 +106,59 @@ const bucketInfo = {
       description: "Dura Smooth Emulsion",
       activeTextColor: "#855E07",
       activeBgColor: "#FFEDC3",
+    },
+  ],
+  exterior: [
+    {
+      splash: Splash7,
+      bucket: Bucket7,
+      description: "Exterior Undercoat – Amendo and Dura Fill",
+      activeTextColor: "#9D6936",
+      activeBgColor: "#FFE9D4",
+    },
+    {
+      splash: Splash8,
+      bucket: Bucket8,
+      description: "Climate Care Xtra Life 7 Exterior Emulsion",
+      activeTextColor: "#0E4946",
+      activeBgColor: "#BAFFFB",
+    },
+    {
+      splash: Splash9,
+      bucket: Bucket9,
+      description: "Climate care shine Life 5 Years - Luxury Category",
+      activeTextColor: "#46772C",
+      activeBgColor: "#ECFF8C",
+    },
+    {
+      splash: Splash10,
+      bucket: Bucket10,
+      description: "Life coat Emulsion - Economy Category",
+      activeTextColor: "#0F1872",
+      activeBgColor: "#B2BAFF",
+    }
+  ],
+  woodmetal: [
+    {
+      splash: Splash11,
+      bucket: Bucket11,
+      description: "Macaw Red Oxide Primer",
+      activeTextColor: "#1B3F5C",
+      activeBgColor: "#DCBC8A",
+    },
+    {
+      splash: Splash12,
+      bucket: Bucket12,
+      description: "Macaw solvent base Tru Glow High Gloss Enamel",
+      activeTextColor: "#475A1D",
+      activeBgColor: 'linear-gradient(180deg, #7BB3AB 0%, #7EC5FA 100%)',
+    },
+    {
+      splash: Splash13,
+      bucket: Bucket13,
+      description: "Macaw TruGlow Satin Enamel",
+      activeTextColor: "#66290D",
+      activeBgColor: "linear-gradient(180deg, #C16243 0%, #F3D170 100%)",
     },
   ],
 };
@@ -301,7 +375,7 @@ const productInfo = {
         background_color: "#FFE9D4",
         font_color: "#855E07",
         accent_color: "#BB8857",
-        // image: Bucket7,
+        image: Bucket7,
         bird: YellowBird,
         features: [
           {
@@ -329,7 +403,7 @@ const productInfo = {
         background_color: "#BAFFFB",
         font_color: "#0E4946",
         accent_color: "#3EC1BA",
-        // image: Bucket7,
+        image: Bucket8,
         bird: RedBird,
         features: [
           {
@@ -353,7 +427,7 @@ const productInfo = {
         background_color: "#ECFF8C",
         font_color: "#46772C",
         accent_color: "#58790F",
-        // image: Bucket7,
+        image: Bucket9,
         bird: YellowBird,
         features: [
           {
@@ -377,7 +451,7 @@ const productInfo = {
         background_color: "#B2BAFF",
         font_color: "#0F1872",
         accent_color: "#3F4CCA",
-        // image: Bucket7,
+        image: Bucket10,
         bird: RedBird,
         features: [
           {
@@ -427,7 +501,7 @@ const productInfo = {
         background_color: "#DCBC8A",
         font_color: "#4F3916",
         accent_color: "#7C571C",
-        // image: Bucket7,
+        image: Bucket11,
         bird: YellowBird,
         features: [
           {
@@ -455,7 +529,7 @@ const productInfo = {
         background_color: "linear-gradient(180deg, #7BB3AB 0%, #7EC5FA 100%)",
         font_color: "#1B3F5C",
         accent_color: "#1B3F5C",
-        // image: Bucket7,
+        image: Bucket12,
         bird: RedBird,
         features: [
           {
@@ -483,7 +557,7 @@ const productInfo = {
         background_color: "linear-gradient(180deg, #C16243 0%, #F3D170 100%)",
         font_color: "#66290D",
         accent_color: "#8B2C00",
-        // image: Bucket7,
+        image: Bucket13,
         bird: YellowBird,
         features: [
           {
