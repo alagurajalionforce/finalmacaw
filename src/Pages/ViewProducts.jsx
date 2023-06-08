@@ -17,6 +17,13 @@ const ViewProducts = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const bucketSize = {
+    1: 75,
+    4: 100,
+    10: 125,
+    20: 150,
+  };
+
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     console.log("The type", queryParams.get("type"));
@@ -25,7 +32,7 @@ const ViewProducts = () => {
 
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-col scal">
         <div className="relative">
           <p className="absolute top-1/3 left-4  text-[#146AB0] font-light text-sm md:text-2xl lg:text-4xl">
             {productInfo[productType].title1}
@@ -224,75 +231,100 @@ const ViewProducts = () => {
                 )}
               </div>
               {productInfo[productType].products[activeIndex]?.isPaint && (
-                <div className="w-full mt-10 p-10 space-y-10 bg-white rounded-xl flex flex-col md:flex-row md:justify-evenly md:items-start md:space-y-0">
-                  <div className="flex flex-col items-center space-y-3 md:w-1/3">
-                    <p
-                      className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
-                    >
-                      Color Range
-                    </p>
-                    <img
-                      className="h-8 w-16"
-                      src={
-                        productInfo[productType].products[activeIndex].colorBar
-                      }
-                    />
-                    <p
-                      className={`font-normal text-[10px] lg:text-sm text-[${productInfo[productType].products[activeIndex].font_color}]`}
-                    >
-                      1000+
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center space-y-3 md:w-1/3">
-                    <p
-                      className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
-                    >
-                      Finish
-                    </p>
-                    <div
-                      className={`flex justify-between items-center w-full p-2 rounded-xl`}
-                      style={{
-                        background:
+                <React.Fragment>
+                  <div className="w-full mt-10 p-10 space-y-10 bg-white rounded-xl flex flex-col md:flex-row md:justify-evenly md:items-start md:space-y-0">
+                    <div className="flex flex-col items-center space-y-3 md:w-1/3">
+                      <p
+                        className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                      >
+                        Color Range
+                      </p>
+                      <img
+                        className="h-8 w-16"
+                        src={
                           productInfo[productType].products[activeIndex]
-                            .accent_color,
-                      }}
-                    >
-                      {productInfo[productType].products[
-                        activeIndex
-                      ].finishTexts.map((finish) => (
-                        <p
-                          className={`text-[7px] lg:text-xs ${
-                            finish.isActive
-                              ? "text-white"
-                              : `text-[${productInfo[productType].products[activeIndex].font_color}]`
-                          } `}
-                        >
-                          {finish.text}
-                        </p>
-                      ))}
+                            .colorBar
+                        }
+                      />
+                      <p
+                        className={`font-normal text-[10px] lg:text-sm text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                      >
+                        1000+
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-center space-y-3 md:w-1/3">
+                      <p
+                        className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                      >
+                        Finish
+                      </p>
+                      <div
+                        className={`flex justify-between items-center w-full p-2 rounded-xl`}
+                        style={{
+                          background:
+                            productInfo[productType].products[activeIndex]
+                              .accent_color,
+                        }}
+                      >
+                        {productInfo[productType].products[
+                          activeIndex
+                        ].finishTexts.map((finish) => (
+                          <p
+                            className={`text-[7px] lg:text-xs ${
+                              finish.isActive
+                                ? "text-white"
+                                : `text-[${productInfo[productType].products[activeIndex].font_color}]`
+                            } `}
+                          >
+                            {finish.text}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center space-y-3  md:w-1/3">
+                      <p
+                        className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                      >
+                        Toxicity
+                      </p>
+                      <img
+                        src={
+                          productInfo[productType].products[activeIndex]
+                            .toxicityLogo
+                        }
+                        className="w-16 h-16"
+                      />
+                      <p
+                        className={`text-[10px] lg:text-sm text-[${productInfo[productType].products[activeIndex].font_color}] font-[400] md:w-40`}
+                      >
+                        Less toxic as there is no added lead, mercury, and
+                        chromium. Low VOC.
+                      </p>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center space-y-3  md:w-1/3">
-                    <p
-                      className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
-                    >
-                      Toxicity
-                    </p>
-                    <img
-                      src={
-                        productInfo[productType].products[activeIndex]
-                          .toxicityLogo
-                      }
-                      className="w-16 h-16"
-                    />
-                    <p
-                      className={`text-[10px] lg:text-sm text-[${productInfo[productType].products[activeIndex].font_color}] font-[400] md:w-40`}
-                    >
-                      Less toxic as there is no added lead, mercury, and
-                      chromium. Low VOC.
-                    </p>
+                  <div className="">
+                    <p className="pt-10">Available Packs</p>
+                    <div className="flex mt-10">
+                      {Object.entries(bucketSize).map((val, index) => {
+                        console.log(val, index);
+                        return (
+                          <div key={index}>
+                            <img
+                              className={`scale-${val[1]}`}
+                              src={
+                                productInfo[productType].products[activeIndex]
+                                  .image
+                              }
+                            ></img>
+                            <p className="pt-4 text-xs md:text-base xl:text-lg md:pt-14">
+                              {val[0]} ltr
+                            </p>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
+                </React.Fragment>
               )}
             </div>
           </div>
