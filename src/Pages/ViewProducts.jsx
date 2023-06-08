@@ -7,6 +7,8 @@ import TwoinOne from "../Images/Features/2in1.png";
 import Coverage from "../Images/Features/coverage.png";
 
 import { productInfo, bucketInfo } from "../Components/ProductMetaData";
+import ColorBar1 from "../Images/FadedColorBars/ColorBar1.png";
+import Toxicity3 from "../Images/ToxicityLogo/Toxicity3.png";
 
 const ViewProducts = () => {
   const [productType, setProductType] = useState("interior");
@@ -17,7 +19,7 @@ const ViewProducts = () => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
-    console.log("The type", queryParams.get("type"))
+    console.log("The type", queryParams.get("type"));
     setProductType(queryParams.get("type"));
   }, [location]);
 
@@ -111,7 +113,7 @@ const ViewProducts = () => {
               {/* Heading and Subheading */}
               <div className="flex flex-col md:items-center md:justify-center md:w-2/3  md:top-14 md:right-0 md:absolute md:origin-top-right lg:top-24 xl:1/3 xl:h-96 xl:top-0 xl:right-16 xl:w-1/2 xl:text-center xl:items-start">
                 <h1
-                  className={`text-xl font-boldtext-center xl:text-4xl wrap xl:text-start`}
+                  className={`text-xl font-bold text-center xl:text-4xl wrap xl:text-start`}
                   style={{
                     color:
                       productInfo[productType].products[activeIndex].font_color,
@@ -173,14 +175,19 @@ const ViewProducts = () => {
                   (value, index) => {
                     return (
                       <div
-                        className="flex flex-col  items-center md:w-1/3 lg:w-1/3 xl:w-1/3"
+                        className={`flex flex-col  items-center ${
+                          productInfo[productType].products[activeIndex]
+                            .features[0].description.length !== 0
+                            ? "md:w-1/3 lg:w-1/3 xl:w-1/3"
+                            : "w-1/6"
+                        }`}
                         key={index}
                       >
                         <div className="flex flex-col justify-center items-center">
                           <div
                             className={`h-20 w-20 rounded-full border-slate-200 border-2 flex justify-center items-center xl:h-32 xl:w-32`}
                             style={{
-                              backgroundColor:
+                              background:
                                 productInfo[productType].products[activeIndex]
                                   .accent_color,
                             }}
@@ -216,6 +223,77 @@ const ViewProducts = () => {
                   }
                 )}
               </div>
+              {productInfo[productType].products[activeIndex]?.isPaint && (
+                <div className="w-full mt-10 p-10 space-y-10 bg-white rounded-xl flex flex-col md:flex-row md:justify-evenly md:items-start md:space-y-0">
+                  <div className="flex flex-col items-center space-y-3 md:w-1/3">
+                    <p
+                      className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                    >
+                      Color Range
+                    </p>
+                    <img
+                      className="h-8 w-16"
+                      src={
+                        productInfo[productType].products[activeIndex].colorBar
+                      }
+                    />
+                    <p
+                      className={`font-normal text-[10px] lg:text-sm text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                    >
+                      1000+
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center space-y-3 md:w-1/3">
+                    <p
+                      className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                    >
+                      Finish
+                    </p>
+                    <div
+                      className={`flex justify-between items-center w-full p-2 rounded-xl`}
+                      style={{
+                        background:
+                          productInfo[productType].products[activeIndex]
+                            .accent_color,
+                      }}
+                    >
+                      {productInfo[productType].products[
+                        activeIndex
+                      ].finishTexts.map((finish) => (
+                        <p
+                          className={`text-[7px] lg:text-xs ${
+                            finish.isActive
+                              ? "text-white"
+                              : `text-[${productInfo[productType].products[activeIndex].font_color}]`
+                          } `}
+                        >
+                          {finish.text}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center space-y-3  md:w-1/3">
+                    <p
+                      className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                    >
+                      Toxicity
+                    </p>
+                    <img
+                      src={
+                        productInfo[productType].products[activeIndex]
+                          .toxicityLogo
+                      }
+                      className="w-16 h-16"
+                    />
+                    <p
+                      className={`text-[10px] lg:text-sm text-[${productInfo[productType].products[activeIndex].font_color}] font-[400] md:w-40`}
+                    >
+                      Less toxic as there is no added lead, mercury, and
+                      chromium. Low VOC.
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

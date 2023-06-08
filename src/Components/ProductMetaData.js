@@ -63,6 +63,12 @@ import HigherLife from "../Images/Features/higher_life.png";
 import FastDry from "../Images/Features/fast_dry.png";
 import AntiFungal from "../Images/Features/anti_fungal.png";
 
+// ColorBars for Interior
+import ColorBar3 from "../Images/FadedColorBars/ColorBar1.png";
+
+// Toxicity logo
+import Toxicity3 from "../Images/ToxicityLogo/Toxicity3.png";
+
 const bucketInfo = {
   interior: [
     {
@@ -236,6 +242,27 @@ const productInfo = {
         accent_color: "#E82B2D",
         image: Bucket3,
         bird: YellowBird,
+        isPaint: true,
+        colorBar: ColorBar3,
+        toxicityLogo: Toxicity3,
+        finishTexts: [
+          {
+            text: "HIGH",
+            isActive: false
+          },
+          {
+            text: "MEDIUM",
+            isActive: false
+          },
+          {
+            text: "SMOOTH",
+            isActive: true
+          },
+          {
+            text: "MATT",
+            isActive: false
+          },
+        ],
         features: [
           {
             icon: SilkFinish,
