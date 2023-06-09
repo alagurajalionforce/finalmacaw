@@ -78,7 +78,7 @@ import ColorBar5 from "../Images/FadedColorBars/ColorBar5.png";
 import ColorBar6 from "../Images/FadedColorBars/ColorBar6.png";
 
 // Toxicity logo
-import Toxicity3 from "../Images/ToxicityLogo/Toxicity3.png";
+// import Toxicity3 from "../Images/ToxicityLogo/Toxicity3.png";
 import Toxicity4 from "../Images/ToxicityLogo/Toxicity4.png";
 import Toxicity5 from "../Images/ToxicityLogo/Toxicity5.png";
 import Toxicity6 from "../Images/ToxicityLogo/Toxicity6.png";
