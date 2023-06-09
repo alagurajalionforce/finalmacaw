@@ -14,8 +14,8 @@ import Splash10 from "../Images/InteriorProducts/Splash/Splash 10.png";
 
 //Imports of Wood & Metal Splashes
 import Splash11 from "../Images/InteriorProducts/Splash/Splash 11.png";
-import Splash12 from "../Images/InteriorProducts/Splash/Splash 12.png"
-import Splash13 from "../Images/InteriorProducts/Splash/Splash 13.png"
+import Splash12 from "../Images/InteriorProducts/Splash/Splash 12.png";
+import Splash13 from "../Images/InteriorProducts/Splash/Splash 13.png";
 
 //Imports of Interior bucket images
 import Bucket1 from "../Images/PaintBuckets/Interior - Undercoat – Amendo and Dura Fill interior primer Small.png";
@@ -65,9 +65,14 @@ import AntiFungal from "../Images/Features/anti_fungal.png";
 
 // ColorBars for Interior
 import ColorBar3 from "../Images/FadedColorBars/ColorBar1.png";
+import ColorBar8 from "../Images/FadedColorBars/ColorBar8.png";
+import ColorBar9 from "../Images/FadedColorBars/ColorBar9.png";
+import ColorBar10 from "../Images/FadedColorBars/ColorBar10.png";
 
 // Toxicity logo
 import Toxicity3 from "../Images/ToxicityLogo/Toxicity3.png";
+import Toxicity8 from "../Images/ToxicityLogo/Toxicity8.png";
+import Toxicity10 from "../Images/ToxicityLogo/Toxicity10.png";
 
 const bucketInfo = {
   interior: [
@@ -142,7 +147,7 @@ const bucketInfo = {
       description: "Life coat Emulsion - Economy Category",
       activeTextColor: "#0F1872",
       activeBgColor: "#B2BAFF",
-    }
+    },
   ],
   woodmetal: [
     {
@@ -157,7 +162,7 @@ const bucketInfo = {
       bucket: Bucket12,
       description: "Macaw solvent base Tru Glow High Gloss Enamel",
       activeTextColor: "#475A1D",
-      activeBgColor: 'linear-gradient(180deg, #7BB3AB 0%, #7EC5FA 100%)',
+      activeBgColor: "linear-gradient(180deg, #7BB3AB 0%, #7EC5FA 100%)",
     },
     {
       splash: Splash13,
@@ -248,19 +253,19 @@ const productInfo = {
         finishTexts: [
           {
             text: "HIGH",
-            isActive: false
+            isActive: false,
           },
           {
             text: "MEDIUM",
-            isActive: false
+            isActive: false,
           },
           {
             text: "SMOOTH",
-            isActive: true
+            isActive: true,
           },
           {
             text: "MATT",
-            isActive: false
+            isActive: false,
           },
         ],
         features: [
@@ -432,6 +437,27 @@ const productInfo = {
         accent_color: "#3EC1BA",
         image: Bucket8,
         bird: RedBird,
+        isPaint: true,
+        colorBar: ColorBar8,
+        toxicityLogo: Toxicity8,
+        finishTexts: [
+          {
+            text: "HIGH",
+            isActive: false,
+          },
+          {
+            text: "MEDIUM",
+            isActive: false,
+          },
+          {
+            text: "SMOOTH",
+            isActive: true,
+          },
+          {
+            text: "MATT",
+            isActive: false,
+          },
+        ],
         features: [
           {
             icon: WaterResistant,
@@ -456,6 +482,27 @@ const productInfo = {
         accent_color: "#58790F",
         image: Bucket9,
         bird: YellowBird,
+        isPaint: true,
+        colorBar: ColorBar9,
+        toxicityLogo: Toxicity8,
+        finishTexts: [
+          {
+            text: "HIGH",
+            isActive: false,
+          },
+          {
+            text: "MEDIUM",
+            isActive: false,
+          },
+          {
+            text: "SMOOTH",
+            isActive: true,
+          },
+          {
+            text: "MATT",
+            isActive: false,
+          },
+        ],
         features: [
           {
             icon: WaterResistant,
@@ -466,7 +513,8 @@ const productInfo = {
           {
             icon: ShineFinish,
             name: "Shine Finish",
-            description: "Finish of paint is very rich in shine, which is soothing to the eyes",
+            description:
+              "Finish of paint is very rich in shine, which is soothing to the eyes",
           },
         ],
       },
@@ -480,11 +528,33 @@ const productInfo = {
         accent_color: "#3F4CCA",
         image: Bucket10,
         bird: RedBird,
+        isPaint: true,
+        colorBar: ColorBar10,
+        toxicityLogo: Toxicity10,
+        finishTexts: [
+          {
+            text: "HIGH",
+            isActive: false,
+          },
+          {
+            text: "MEDIUM",
+            isActive: false,
+          },
+          {
+            text: "SMOOTH",
+            isActive: true,
+          },
+          {
+            text: "MATT",
+            isActive: false,
+          },
+        ],
         features: [
           {
             icon: EasyToApply,
             name: "Easy To Apply",
-            description: "Compared to Distemper and Cement Paint, Dura Smooth is very easy to use and apply",
+            description:
+              "Compared to Distemper and Cement Paint, Dura Smooth is very easy to use and apply",
           },
           {
             icon: Warrenty,
@@ -494,12 +564,14 @@ const productInfo = {
           {
             icon: FastDry,
             name: "Fast Drying",
-            description: "In normal condition, it dries faster than Distemper and Cement Paint",
+            description:
+              "In normal condition, it dries faster than Distemper and Cement Paint",
           },
           {
             icon: HigherLife,
             name: "Higher Life",
-            description: "It has higher life length than Distemper and Cement Paint",
+            description:
+              "It has higher life length than Distemper and Cement Paint",
           },
           {
             icon: AntiFungal,
@@ -509,7 +581,8 @@ const productInfo = {
           {
             icon: Coverage,
             name: "Excellent Coverage",
-            description: "It has higher coverage than Cement Paint and Distemper",
+            description:
+              "It has higher coverage than Cement Paint and Distemper",
           },
         ],
       },
