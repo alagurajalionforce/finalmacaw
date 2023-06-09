@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import ArrowLeft from "../Images/arrow-left-solid.svg";
-
-import CrackBridging from "../Images/Features/crack_bridging.png";
-import TwoinOne from "../Images/Features/2in1.png";
-import Coverage from "../Images/Features/coverage.png";
-
+import { useLocation, useNavigate } from "react-router-dom";
 import { productInfo, bucketInfo } from "../Components/ProductMetaData";
-import ColorBar1 from "../Images/FadedColorBars/ColorBar1.png";
-import Toxicity3 from "../Images/ToxicityLogo/Toxicity3.png";
 
 const ViewProducts = () => {
   const [productType, setProductType] = useState("interior");
@@ -18,10 +10,10 @@ const ViewProducts = () => {
   const navigate = useNavigate();
 
   const bucketSize = {
-    1: 75,
-    4: 100,
-    10: 125,
-    20: 150,
+    1: "scale(0.75)",
+    4: "scale(1)",
+    10: "scale(1.25)",
+    20: "scale(1.5)",
   };
 
   useEffect(() => {
@@ -235,7 +227,10 @@ const ViewProducts = () => {
                   <div className="w-full mt-10 p-10 space-y-10 bg-white rounded-xl flex flex-col md:flex-row md:justify-evenly md:items-start md:space-y-0">
                     <div className="flex flex-col items-center space-y-3 md:w-1/3">
                       <p
-                        className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                        className={`text-xs md:text-md lg:text-lg`}
+                        style={{
+                          color: productInfo[productType].products[activeIndex].font_color
+                        }}
                       >
                         Color Range
                       </p>
@@ -247,14 +242,20 @@ const ViewProducts = () => {
                         }
                       />
                       <p
-                        className={`font-normal text-[10px] lg:text-sm text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                        className={`font-normal text-[10px] lg:text-sm`}
+                        style={{
+                          color: productInfo[productType].products[activeIndex].font_color
+                        }}
                       >
                         1000+
                       </p>
                     </div>
                     <div className="flex flex-col items-center space-y-3 md:w-1/3">
                       <p
-                        className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                        className={`text-xs md:text-md lg:text-lg`}
+                        style={{
+                          color: productInfo[productType].products[activeIndex].font_color
+                        }}
                       >
                         Finish
                       </p>
@@ -270,11 +271,10 @@ const ViewProducts = () => {
                           activeIndex
                         ].finishTexts.map((finish) => (
                           <p
-                            className={`text-[7px] lg:text-xs ${
-                              finish.isActive
-                                ? "text-white"
-                                : `text-[${productInfo[productType].products[activeIndex].font_color}]`
-                            } `}
+                            className={`text-[7px] lg:text-xs`}
+                            style={{
+                              color: finish.isActive? "white":  productInfo[productType].products[activeIndex].font_color
+                            }}
                           >
                             {finish.text}
                           </p>
@@ -283,7 +283,10 @@ const ViewProducts = () => {
                     </div>
                     <div className="flex flex-col items-center space-y-3  md:w-1/3">
                       <p
-                        className={`text-xs md:text-md lg:text-lg text-[${productInfo[productType].products[activeIndex].font_color}]`}
+                        className={`text-xs md:text-md lg:text-lg`}
+                        style={{
+                          color: productInfo[productType].products[activeIndex].font_color
+                        }}
                       >
                         Toxicity
                       </p>
@@ -295,7 +298,10 @@ const ViewProducts = () => {
                         className="w-16 h-16"
                       />
                       <p
-                        className={`text-[10px] lg:text-sm text-[${productInfo[productType].products[activeIndex].font_color}] font-[400] md:w-40`}
+                        className={`text-[10px] lg:text-sm font-[400] md:w-40`}
+                        style={{
+                          color: productInfo[productType].products[activeIndex].font_color
+                        }}  
                       >
                         Less toxic as there is no added lead, mercury, and
                         chromium. Low VOC.
@@ -305,19 +311,21 @@ const ViewProducts = () => {
                   <div className="">
                     <p className="pt-10">Available Packs</p>
                     <div className="flex mt-10 items-end">
-                      {Object.entries(bucketSize).map((val, index) => {
-                        const scaleClass = `scale-${val[1]}`;
+                      {Object.entries(bucketSize).map(([ltr, scaleVal], index) => {
                         return (
                           <div key={index} className="flex flex-col w-1/4">
                             <img
-                              className={`${scaleClass} object-bottom w-full`}
+                              className={`object-bottom w-full`}
+                              style={{
+                                transform: scaleVal
+                              }}
                               src={
                                 productInfo[productType].products[activeIndex]
                                   .image
                               }
                             ></img>
                             <p className="pt-4 text-xs md:text-base xl:text-lg md:pt-14">
-                              {val[0]} ltr
+                              {ltr} ltr
                             </p>
                           </div>
                         );

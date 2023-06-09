@@ -73,6 +73,15 @@ import ColorBar10 from "../Images/FadedColorBars/ColorBar10.png";
 import Toxicity3 from "../Images/ToxicityLogo/Toxicity3.png";
 import Toxicity8 from "../Images/ToxicityLogo/Toxicity8.png";
 import Toxicity10 from "../Images/ToxicityLogo/Toxicity10.png";
+import ColorBar4 from "../Images/FadedColorBars/ColorBar4.png";
+import ColorBar5 from "../Images/FadedColorBars/ColorBar5.png";
+import ColorBar6 from "../Images/FadedColorBars/ColorBar6.png";
+
+// Toxicity logo
+import Toxicity3 from "../Images/ToxicityLogo/Toxicity3.png";
+import Toxicity4 from "../Images/ToxicityLogo/Toxicity4.png";
+import Toxicity5 from "../Images/ToxicityLogo/Toxicity5.png";
+import Toxicity6 from "../Images/ToxicityLogo/Toxicity6.png";
 
 const bucketInfo = {
   interior: [
@@ -305,6 +314,27 @@ const productInfo = {
         accent_color: "#DE618B",
         image: Bucket4,
         bird: RedBird,
+        isPaint: true,
+        colorBar: ColorBar4,
+        toxicityLogo: Toxicity4,
+        finishTexts: [
+          {
+            text: "HIGH",
+            isActive: false
+          },
+          {
+            text: "MEDIUM",
+            isActive: false
+          },
+          {
+            text: "SMOOTH",
+            isActive: true
+          },
+          {
+            text: "MATT",
+            isActive: false
+          },
+        ],
         features: [
           {
             icon: MicroCrossing,
@@ -336,6 +366,27 @@ const productInfo = {
         accent_color: "#9747FF",
         image: Bucket5,
         bird: YellowBird,
+        isPaint: true,
+        colorBar: ColorBar5,
+        toxicityLogo: Toxicity5,
+        finishTexts: [
+          {
+            text: "HIGH",
+            isActive: false
+          },
+          {
+            text: "MEDIUM",
+            isActive: false
+          },
+          {
+            text: "SMOOTH",
+            isActive: false
+          },
+          {
+            text: "MATT",
+            isActive: true
+          },
+        ],
         features: [
           {
             icon: MattFinish,
@@ -372,6 +423,27 @@ const productInfo = {
         accent_color: "#F6B218",
         image: Bucket6,
         bird: RedBird,
+        isPaint: true,
+        colorBar: ColorBar6,
+        toxicityLogo: Toxicity6,
+        finishTexts: [
+          {
+            text: "HIGH",
+            isActive: false
+          },
+          {
+            text: "MEDIUM",
+            isActive: false
+          },
+          {
+            text: "SMOOTH",
+            isActive: false
+          },
+          {
+            text: "MATT",
+            isActive: false
+          },
+        ],
         features: [
           {
             icon: EasyToApply,
