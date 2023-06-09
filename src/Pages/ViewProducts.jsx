@@ -10,10 +10,10 @@ const ViewProducts = () => {
   const navigate = useNavigate();
 
   const bucketSize = {
-    1: 75,
-    4: 100,
-    10: 125,
-    20: 150,
+    1: "scale(0.75)",
+    4: "scale(1)",
+    10: "scale(1.25)",
+    20: "scale(1.5)",
   };
 
   useEffect(() => {
@@ -311,19 +311,21 @@ const ViewProducts = () => {
                   <div className="">
                     <p className="pt-10">Available Packs</p>
                     <div className="flex mt-10 items-end">
-                      {Object.entries(bucketSize).map((val, index) => {
-                        const scaleClass = `scale-${val[1]}`;
+                      {Object.entries(bucketSize).map(([ltr, scaleVal], index) => {
                         return (
                           <div key={index} className="flex flex-col w-1/4">
                             <img
-                              className={`${scaleClass} object-bottom w-full`}
+                              className={`object-bottom w-full`}
+                              style={{
+                                transform: scaleVal
+                              }}
                               src={
                                 productInfo[productType].products[activeIndex]
                                   .image
                               }
                             ></img>
                             <p className="pt-4 text-xs md:text-base xl:text-lg md:pt-14">
-                              {val[0]} ltr
+                              {ltr} ltr
                             </p>
                           </div>
                         );
