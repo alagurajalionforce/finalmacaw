@@ -304,13 +304,13 @@ const ViewProducts = () => {
                   </div>
                   <div className="">
                     <p className="pt-10">Available Packs</p>
-                    <div className="flex mt-10">
+                    <div className="flex mt-10 items-end">
                       {Object.entries(bucketSize).map((val, index) => {
-                        console.log(val, index);
+                        const scaleClass = `scale-${val[1]}`;
                         return (
-                          <div key={index}>
+                          <div key={index} className="flex flex-col w-1/4">
                             <img
-                              className={`scale-${val[1]}`}
+                              className={`${scaleClass} object-bottom w-full`}
                               src={
                                 productInfo[productType].products[activeIndex]
                                   .image
