@@ -82,6 +82,7 @@ import ColorBar6 from "../Images/FadedColorBars/ColorBar6.png";
 import Toxicity4 from "../Images/ToxicityLogo/Toxicity4.png";
 import Toxicity5 from "../Images/ToxicityLogo/Toxicity5.png";
 import Toxicity6 from "../Images/ToxicityLogo/Toxicity6.png";
+import Toxicity7 from "../Images/ToxicityLogo/Toxicity7.png";
 
 const bucketInfo = {
   interior: [
@@ -556,7 +557,7 @@ const productInfo = {
         bird: YellowBird,
         isPaint: true,
         colorBar: ColorBar9,
-        toxicityLogo: Toxicity8,
+        toxicityLogo: Toxicity7,
         finishTexts: [
           {
             text: "HIGH",
