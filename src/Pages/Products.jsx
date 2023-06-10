@@ -16,7 +16,7 @@ function Products() {
       <div className="relative">
         <img src={banner} />
       </div>
-      <div className="container flex flex-col items-center">
+      <div className="container flex flex-col items-center mb-10">
         <div
           className="mt-10 flex w-5/5 lg:w-4/5 h-36 md:h-52 lg:h-64 rounded-lg cursor-pointer"
           onClick={() => navigate("/viewproducts?type=interior")}

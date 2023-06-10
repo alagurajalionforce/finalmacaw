@@ -43,7 +43,7 @@ function AboutUs() {
               className="absolute w-1/3 -top-[8%]  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             ></img>
             <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">Vision</h1>
-            <p className="text-center w-10/12 md:w-full m-auto pb-8">
+            <p className="text-center w-10/12 md:w-full m-auto pb-8 leading-6">
               To be the forefront of India's Paints industry, where we
               prioritize our values and innovate quality products and services
               that contribute to India's growth. At our company, we strive to
@@ -55,8 +55,8 @@ function AboutUs() {
               src={Mission}
               className="absolute  w-1/3 -top-[8%]  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             ></img>
-            <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">Misson</h1>
-            <p className="text-center w-10/12 md:w-full m-auto pb-8">
+            <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">Mission</h1>
+            <p className="text-center w-10/12 md:w-full m-auto pb-8 leading-6">
               Our mission is to earn the trust of our stakeholders by swiftly
               implementing dynamic initiatives that align with our core values
               and long-term vision. With our innovative paint solutions, we
