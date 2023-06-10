@@ -1,134 +1,73 @@
-import '../App.css'
-import CEOimg from '../Images/Team 1.png'
-import '../Styles/About.css'
-import PaintSplione from '../Images/paint-spill-3 1.png'
-import PaintSpliTwo from '../Images/paint-spill-4 1.png'
-import OurStory from '../Images/ourStory.png'
-import Aboutus from '../Images/aboutus.png'
-import Mask from '../Images/Mask group (2).png'
+import React from "react";
+import AboutUsBanner from "../Images/Banners/AboutUs.png";
+import AboutBird from "../Images/About Us/our-story-image.png";
+import Vision from "../Images/About Us/vision.png";
+import Mission from "../Images/About Us/mission.png";
+
 function AboutUs() {
+  const birdStyle = {
+    clipPath: "polygon(0% 0%, 180% 28%, 100% 82%, 0% 100%)",
+  };
+  const textStyle = {
+    clipPath: "polygon(0% 32%, 180% 0%, 100% 100%, 0% 90%)",
+  };
+
   return (
-    <div>
-      {/* aboutus baner start */}
-      <section className="section-gap">
-        <div className="w-100 about-us">
-          <img className="w-100 mask-img" src={Mask} />
-          <img className="w-100" src={Aboutus} />
-
-          <p>About Us</p>
+    <div className="flex flex-col w-full">
+      <img src={AboutUsBanner} />
+      <div className="flex h-auto">
+        {/* <div className="w-1/3 absolute top-[10.4rem] z-20">
+          <div className="relative">
+            <img src={AboutBird} style={birdStyle} className="block scale-125"  />
+          </div>
         </div>
-      </section>
-      {/* aboutus baner end */}
-
-      {/* our story start */}
-      <section className="section-gap">
-        <div className="d-flex container">
-          <div className="w-50  ourstorycontainer">
-            <p className="our-story-header">Our Story</p>
-            <p className="our-story-content">
-              At Macaw, we believe that every home deserves to be adorned with
-              vibrant colors that reflect success and joy. Our paint brand was
-              born out of a desire to make bold statements through our products,
-              just like the stunningly-hued New World parrots – Macaws! We are
-              devoted to bringing Flying Colors into homes across India by
-              providing premium quality paints and innovative solutions in
-              collaboration with our customers. With an unwavering commitment
-              towards integrity, creativity and innovation; let us journey
-              together on this mission of delivering happiness and contentment
-              via modern color palettes for your abode.
+        <div className="w-4/6 absolute top-[6rem] right-0">
+          <div className="relative">
+            <p className="absolute right-0 top-0 bg-white text-[8px] p-8 h-56" style={textStyle}>
+              Introducing Macaw Paints - a brand that stands out from the rest.
+              Our dream is to decorate homes that exude success and boast
+              "flying colors." We took that vision quite literally, and realized
+              that every home deserves to flaunt a vibrant and eye-catching
+              exterior. Thus, Macaw Paints was born - named after the
+              illustriously colorful New World parrot. Our signature coat will
+              make your home shine with vibrancy, reflecting your
+              accomplishments and success to the world.
             </p>
           </div>
-          <div className="w-50  ourstorycontainer">
-            <div className="our-story-img">
-              <img src={OurStory} />
-            </div>
+        </div> */}
+
+        <div className="flex justify-center items-center mt-10 md:mt-32 flex-wrap">
+          <div className="relative w-full bg-white m-12 rounded-xl md:p-10 md:w-2/6">
+            <img
+              src={Vision}
+              className="absolute w-1/3 -top-[8%]  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            ></img>
+            <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">Vision</h1>
+            <p className="text-center w-10/12 md:w-full m-auto pb-8">
+              To be the forefront of India's Paints industry, where we
+              prioritize our values and innovate quality products and services
+              that contribute to India's growth. At our company, we strive to
+              make an impact and constantly push ourselves towards success.
+            </p>
+          </div>
+          <div className="relative bg-white m-10 rounded-xl md:p-10 md:w-2/6">
+            <img
+              src={Mission}
+              className="absolute  w-1/3 -top-[8%]  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            ></img>
+            <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">Misson</h1>
+            <p className="text-center w-10/12 md:w-full m-auto pb-8">
+              Our mission is to earn the trust of our stakeholders by swiftly
+              implementing dynamic initiatives that align with our core values
+              and long-term vision. With our innovative paint solutions, we
+              strive to bring joy and happiness to people's lives. Join us in
+              delivering a splash of vibrant colors to the world!
+            </p>
           </div>
         </div>
-      </section>
-      {/* our story end */}
-
-      {/* section card start */}
-      <section className="section-gap">
-        <div className="container-card">
-          <div className="d-flex justify">
-            <div className="w-50 vision-mission">
-              {/* <div className="vision">
-                <p className="vision-position vision-mission-text">Vision</p>
-                <img src={PaintSplione} alt="" />
-              </div> */}
-              <div className="vision-content">
-              <span className="vision-content-head">Vision</span>
-                <p>
-                To be the forefront of India's Paints industry, where we prioritize our values
-                 and innovate quality products and services that contribute to India's growth.
-                  At our company, we strive to make an impact and constantly push ourselves 
-                  towards success.
-                </p>
-              </div>
-            </div>
-            <div className="w-50 vision-mission">
-             {/*  <div className="mission">
-                <p className="mission-position vision-mission-text">Mision</p>
-                <img src={PaintSpliTwo} alt="" />
-              </div> */}
-              <div className="vision-content">
-              <span className="vision-content-head">Mission</span>
-                <p>
-                Our mission is to earn the trust of our stakeholders by
-                 swiftly implementing dynamic initiatives that align with
-                  our core values and long-term vision. With our innovative 
-                  paint solutions, we strive to bring joy and happiness to people's
-                   lives. Join us in delivering a splash of vibrant colors to the world!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* section card end */}
-
-      <div className="container">
-        {/* section CEO Start */}
-        {/* <section className="section-gap">
-          <div className="d-flex" style={{ marginTop: '50px' }}>
-            <div className="w-50 ">
-              <div className="ceo-section-one">
-                <img src={CEOimg} alt="" />
-              </div>
-            </div>
-            <div className="w-50  flex-center">
-              <p className="ceo clr-blu">CEO</p>
-              <p className="ceo">John Doe</p>
-              <p className="abut-ceo">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </section> */}
-        {/* section CEO end */}
-        {/* section CEO Start */}
-       {/*  <section className="section-gap">
-          <div className="d-flex">
-            <div className="w-50  flex-center">
-              <p className="ceo clr-blu">CEO</p>
-              <p className="ceo">John Doe</p>
-              <p className="abut-ceo">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <div className="w-50 ">
-              <div className="ceo-section-one">
-                <img src={CEOimg} alt="" />
-              </div>
-            </div>
-          </div>
-        </section> */}
-        {/* section CEO end */}
       </div>
     </div>
-  )
+  );
 }
 
-export default AboutUs
+export default AboutUs;

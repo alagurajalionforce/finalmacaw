@@ -4,7 +4,7 @@ import ContactUsBanner from "../Images/Banners/ContactUs.png";
 function ContactUs() {
   return (
     <div className="flex flex-col space-y-10 items-center">
-        <img src={ContactUsBanner} />
+      <img src={ContactUsBanner} />
       <div
         id="contactDiv"
         className="flex flex-col items-center p-5 w-5/6 bg-white rounded-lg"
@@ -48,9 +48,7 @@ function ContactUs() {
             placeholder="Message"
           />
         </div>
-        <button className="border p-2 rounded-lg">
-            Submit
-          </button>
+        <button className="border p-2 rounded-lg">Submit</button>
       </div>
     </div>
     // <div>
