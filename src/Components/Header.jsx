@@ -1,80 +1,101 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import Logo from "../Images/LOGO.png";
-import "../Styles/Header.css"
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import AppLogo from "../Images/AppLogo/AppLogo.png";
 
-//import { CSSTransition } from "react-transition-group";
+const routerConfig = [
+  {
+    pathname: "/About",
+    name: "About Us",
+  },
+  {
+    pathname: "/Products",
+    name: "Products",
+  },
+  {
+    pathname: "/Contact",
+    name: "Contact Us",
+  },
+];
 
 function Header() {
+  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [isNavVisible, setNavVisibility] = useState(false);
-  //const [isSmallScreen, setIsSmallScreen] = useState(false);
-  console.log(Location)
-  useEffect(() => {
-    //setIsSmallScreen(false);
-    //setNavVisibility(false);
-    console.log(window.location.pathname)
-  });
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    mediaQuery.addListener(handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
-
-    return () => {
-      mediaQuery.removeListener(handleMediaQueryChange);
-    };
-  }, []);
-
-  const handleMediaQueryChange = mediaQuery => {
-    if (mediaQuery.matches) {
-      setNavVisibility(false);
-    } else {
-      setNavVisibility(true);
-    }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
-
-  const toggleNav = () => {
-    setNavVisibility(!isNavVisible);
-  };
-
-
-
 
   return (
-    <div className="z-50">
-      <header className="Nav-container Header">
-        <div className="logo">
-        <NavLink to="/"><img src={Logo} alt=""/></NavLink>
-          
+    <nav className="bg-transparent">
+      <div className="px-10 py-6 md:px-14 md:py-10 flex items-center justify-between">
+        <div className="flex items-center w-full justify-between md:w-auto">
+          <NavLink to={"/"}>
+            <img
+              src={AppLogo}
+              className="h-12 lg:h-24 md:h-20 cursor-pointer"
+            />
+          </NavLink>
+          <button
+            onClick={toggleMenu}
+            className="md:hidden cursor-pointer text-white text-3xl"
+          >
+            &#9776;
+          </button>
+          <div
+            id="mobile-menu"
+            className={`${
+              isMenuOpen ? "flex" : "hidden"
+            } md:hidden z-50 absolute top-0 right-[0.5%] ☐bg-red-800 text-5xl  flex-col justify-content-center`}
+          >
+            <nav
+              className={`flex flex-col h-screen w-screen bg-black items-center space-y-5 py-8 text-white transition-opacity duration-1000 ${
+                isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+              aria-label="mobile"
+            >
+              <button
+                onClick={toggleMenu}
+                className="text-8x1 self-end px-6 text-white"
+              >
+                &times;
+              </button>
+              {routerConfig.map((route, index) => (
+                <NavLink exact to={route.pathname}>
+                  <div onClick={toggleMenu}>
+                    <p 
+                      className={`${
+                        location.pathname === route.pathname
+                          ? "text-[#F6B218]"
+                          : "text-white"
+                      } text-base`}
+                    >
+                      {route.name}
+                    </p>
+                  </div>
+                </NavLink>
+              ))}
+            </nav>
+          </div>
         </div>
-        {/* !isSmallScreen || */ isNavVisible ?
-        <div className="Nav-list Nav">
-          <div></div>
-          <div></div>
-          <div></div>
-          <NavLink to="/About">About Us</NavLink>
-          <NavLink to="/Products">Products</NavLink>
-          <NavLink to="/Contact">Contact Us</NavLink>
-          {/* <NavLink to="/Blogs">Blogs</NavLink>
-          <NavLink to="/Colors">Colors</NavLink>
-          <NavLink to="/Inspiration">Inspiration</NavLink> */}
-        </div> : ""}
-        <button onClick={toggleNav} className="Burger">
-        {/* ?? */} <div></div>
-                    <div></div>
-                    <div></div>
-      </button>
-      </header> 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-      <Outlet/>
-    </div>
+        <ul className="space-x-10 hidden md:flex">
+          {routerConfig.map((route, index) => (
+            <li key={index}>
+              <NavLink exact to={route.pathname}>
+                <div>
+                  <p className="text-white lg:text-lg md:text-sm">
+                    {route.name}
+                  </p>
+                  {location.pathname === route.pathname && (
+                    <div className="border-[2px] mt-2 rounded-md border-[#F6B218]"></div>
+                  )}
+                </div>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Outlet />
+    </nav>
   );
 }
 
