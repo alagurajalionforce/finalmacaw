@@ -3,6 +3,7 @@ import AboutUsBanner from "../Images/Banners/AboutUs.png";
 import AboutBird from "../Images/About Us/our-story-image.png";
 import Vision from "../Images/About Us/vision.png";
 import Mission from "../Images/About Us/mission.png";
+import AboutUsContent from "../Images/About Us/about_us_main.png";
 
 function AboutUs() {
   const birdStyle = {
@@ -15,7 +16,7 @@ function AboutUs() {
   return (
     <div className="flex flex-col w-full">
       <img src={AboutUsBanner} />
-      <div className="flex h-auto">
+      <div className="flex-col h-auto">
         {/* <div className="w-1/3 absolute top-[10.4rem] z-20">
           <div className="relative">
             <img src={AboutBird} style={birdStyle} className="block scale-125"  />
@@ -36,14 +37,19 @@ function AboutUs() {
           </div>
         </div> */}
 
+        <div className="w-full">
+          <img src={AboutUsContent}></img>
+        </div>
         <div className="flex justify-center items-center mt-10 md:mt-32 flex-wrap">
           <div className="relative w-full bg-white m-12 rounded-xl md:p-10 md:w-2/6">
             <img
               src={Vision}
-              className="absolute w-1/3 -top-[8%]  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="absolute w-1/3 -top-[8%]  left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:w-32"
             ></img>
-            <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">Vision</h1>
-            <p className="text-center w-10/12 md:w-full m-auto pb-8">
+            <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">
+              Vision
+            </h1>
+            <p className="text-center w-10/12 md:w-full m-auto pb-8 xl:mt-10 leading-7">
               To be the forefront of India's Paints industry, where we
               prioritize our values and innovate quality products and services
               that contribute to India's growth. At our company, we strive to
@@ -53,10 +59,12 @@ function AboutUs() {
           <div className="relative bg-white m-10 rounded-xl md:p-10 md:w-2/6">
             <img
               src={Mission}
-              className="absolute  w-1/3 -top-[8%]  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="absolute  w-1/3 -top-[8%]  left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:w-32"
             ></img>
-            <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">Misson</h1>
-            <p className="text-center w-10/12 md:w-full m-auto pb-8">
+            <h1 className="m-12 mb-6 text-center text-[#146AB0] md:text-xl md:m-2">
+              Misson
+            </h1>
+            <p className="text-center w-10/12 md:w-full m-auto pb-8 leading-7">
               Our mission is to earn the trust of our stakeholders by swiftly
               implementing dynamic initiatives that align with our core values
               and long-term vision. With our innovative paint solutions, we
