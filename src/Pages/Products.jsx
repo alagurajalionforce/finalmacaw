@@ -1,9 +1,9 @@
 import "../App.css";
 import "../Styles/Products.css";
 
-import ppb1 from "../Images/ppb1.jpg";
-import ppb2 from "../Images/ppb2.jpg";
-import ppb3 from "../Images/ppb3.jpg";
+import ppb1 from "../Images/Banners/Interior (2).png";
+import ppb2 from "../Images/Banners/Exterior (2).png";
+import ppb3 from "../Images/Banners/Wood & Metal (2).png";
 
 import banner from "../Images/ProductBanner.png";
 import { useNavigate } from "react-router-dom";
