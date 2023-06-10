@@ -13,6 +13,7 @@ import ContactUs from "./Pages/Contact";
 import Products from "./Pages/Products";
 import ProductsList from "./Pages/ProductsList";
 import ViewProducts from "./Pages/ViewProducts";
+import MyFooter from "./Components/MyFooter";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      <Footer />
+      <MyFooter />
     </>
   );
 }

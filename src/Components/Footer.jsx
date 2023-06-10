@@ -2,9 +2,9 @@ import React from 'react'
 import Logo from "../Images/Final-logo.png";
 import "../Styles/Footer.css"
 
-import fc from "../Images/fc.png"
-import fw from "../Images/fw.png"
-import fm from "../Images/fm.png"
+import fc from "../Images/Footer/support_call.png"
+import fw from "../Images/Footer/support_whatsapp.png"
+import fm from "../Images/Footer/support_mail.png"
 
 const Footer = () => {
   return (
