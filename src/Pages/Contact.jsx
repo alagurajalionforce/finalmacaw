@@ -1,16 +1,20 @@
 import React from "react";
 import ContactUsBanner from "../Images/Banners/ContactUs.png";
+import "../Styles/ContactUs.css";
+import ContactPhone from "../Images/Icons/PhoneIcon.png";
+import ContactWhatsApp from "../Images/Icons/WhatsAppIcon.png";
+import ContactMail from "../Images/Icons/EmailIcon.png";
 
 function ContactUs() {
   return (
-    <div className="flex flex-col space-y-10 items-center">
+    <div className="flex flex-col items-center">
       <img src={ContactUsBanner} />
       <div
         id="contactDiv"
-        className="flex flex-col items-center p-5 w-5/6 bg-white rounded-lg"
+        className="flex flex-col items-center p-5 w-4/6 my-10 bg-white rounded-lg"
       >
-        <p className="text-[#146AB0]">Get in Touch</p>
-        <p className="text-xs mt-3 self-center">
+        <p className="text-[#146AB0] lg:text-lg">Get in Touch</p>
+        <p className="text-xs  mt-3 lg:text-sm">
           Looking for something? Drop your query and will contact you.
         </p>
         <div className="w-full flex flex-col items-center space-y-10 my-10 md:flex-row md:space-y-0 md:space-x-3">
@@ -48,90 +52,41 @@ function ContactUs() {
             placeholder="Message"
           />
         </div>
-        <button className="border p-2 rounded-lg">Submit</button>
+        <button
+          className="submitBtn border-[1.5px] w-[120px] h-11 border-[#ED1C24] bg-cover bg-no-repeat p-2 px-6 text-sm rounded-lg"
+          style={{
+            marginTop: 20,
+          }}
+        >
+          Submit
+        </button>
+      </div>
+
+      <div className="flex flex-col w-8/12 items-center justify-center mb-12 md:w-7/12 md:flex-row my-10">
+        <div className="flex flex-col w-full mb-10 md:mb-0 text-white text-center md:self-start md:w-1/2">
+          <p className="md:self-start mb-5 md:mb-3 lg:text-lg">Contact</p>
+          <div className="flex items-center space-x-3 mb-2">
+            <img src={ContactPhone} className="w-5 h-5" />
+            <p className="text-[12px] font-light lg:text-sm">Toll free - 1800 123 1003</p>
+          </div>
+          <div className="flex items-center space-x-3 mb-2">
+            <img src={ContactWhatsApp} className="w-5 h-5" />
+            <p className="text-[12px] font-light lg:text-sm">Whatsapp - 81005 56677</p>
+          </div>
+          <div className="flex items-center space-x-3">
+            <img src={ContactMail} className="w-5 h-5" />
+            <p className="text-[12px] font-light lg:text-sm">Email- help@macaw.com</p>
+          </div>
+        </div>
+        <div className="flex flex-col w-full text-white text-center md:text-left md:w-1/2 md:self-start">
+          <p className="md:self-start mb-2 md:mb-3 lg:mb-2 lg:text-lg">Address</p>
+          <p className="text-xs font-light mb-10 leading-6 lg:text-sm w-52">
+            Premises no.03-319, DH-6/11, Action Area-1D, Street No. 319, New
+            Town, Kolkata-700156
+          </p>
+        </div>
       </div>
     </div>
-    // <div>
-    //   <section className="section-gap">
-    //     <div className="w-100 about-us contact-us">
-    //       <img className="w-100" src={contact} />
-    //       <p>Contact Us</p>
-    //     </div>
-    //   </section>
-    //   <section className="products-body">
-    //     <div className="sub-con-cen">
-    //       <div className="submit-con">
-    //         <div className="submit-cards">
-    //           <div className="heading-submit">
-    //             <h1>Get in Touch</h1>
-    //             <p>
-    //               Looking for something? Drop your query and will contact you.
-    //             </p>
-    //           </div>
-
-    //           <div className="input-set-one">
-    //             <input
-    //               type="text"
-    //               placeholder="What are you looking for?"
-    //               className=" typeone"
-    //             />
-    //             <input
-    //               type="text"
-    //               className="typetwo"
-    //               placeholder="Full Name*"
-    //             />
-    //             <input type="text" className="typetwo" placeholder="Mobile*" />
-    //           </div>
-    //           <div className="input-set-two">
-    //             <input type="text" className="typetwo" placeholder="Email*" />
-    //             <input type="text" className="typetwo" placeholder="Pincode*" />
-    //             <input type="text" className="typeone" placeholder="Message" />
-    //           </div>
-    //         </div>
-    //         <div className="submit-btn">
-    //           <button>Submit</button>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </section>
-    //   <section >
-
-    //       <div className='contact-detail'>
-    //           <div className="support">
-    //             <div className="Head">
-    //               <p>Contact</p>
-    //             </div>
-    //             <div className="cont">
-
-    //               <p><img src={fc} />Toll free - 1800 123 1003</p>
-
-    //             </div>
-    //             <div className="cont">
-    //               <p><img src={fw} />Whatsapp - 81005 56677</p>
-    //             </div>
-    //             <div className="cont">
-    //               <p><img src={fm} />Email - help@macaw.com</p>
-    //             </div>
-    //           </div>
-
-    //             <div className="address">
-    //             <div className="Head">
-    //               <p>Address</p>
-    //             </div>
-    //               <p>Premises no.03-319, DH-6/11,
-    //                 <br/>
-    //                 Action Area-1D, Street No. 319,
-    //                 <br/>
-    //                 New Town, Kolkata-700156</p>
-    //             </div>
-
-    //       </div>
-
-    //       <br/>
-    //       <br/>
-    //       <br/>
-    //   </section>
-    // </div>
   );
 }
 

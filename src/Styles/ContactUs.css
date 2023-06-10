@@ -1,0 +1,15 @@
+.submitBtn:hover {
+    background: url("../Images/SubmitButton.png");
+    color: white;
+    border-color: white;
+    animation: opacity 300ms ease-in-out;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

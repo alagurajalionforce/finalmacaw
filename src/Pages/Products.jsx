@@ -1,11 +1,11 @@
 import "../App.css";
 import "../Styles/Products.css";
 
-import ppb1 from "../Images/ppb1.jpg";
-import ppb2 from "../Images/ppb2.jpg";
-import ppb3 from "../Images/ppb3.jpg";
+import ppb1 from "../Images/Banners/Interior (2).png";
+import ppb2 from "../Images/Banners/Exterior (2).png";
+import ppb3 from "../Images/Banners/Wood & Metal (2).png";
 
-import banner from "../Images/ProductBanner.png";
+import banner from "../Images/Banners/Products.png";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
@@ -14,10 +14,7 @@ function Products() {
   return (
     <React.Fragment>
       <div className="relative">
-        <p className="absolute origin-top-left top-[45%] left-[15%] md:left-[17%] xl:left-[13%] text-[#146AB0] font-light text-sm md:text-2xl lg:text-4xl xl:text-6xl">
-          Products
-        </p>
-        <img src={banner} className="w-full bg-white" />
+        <img src={banner} />
       </div>
       <div className="container flex flex-col items-center">
         <div
