@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { productInfo, bucketInfo } from "../Components/ProductMetaData";
 
@@ -8,6 +8,33 @@ const ViewProducts = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  const containerRef = useRef(null);
+  const [isMouseDown, setIsMouseDown] = useState(false);
+  const [startX, setStartX] = useState(null);
+  const [scrollLeft, setScrollLeft] = useState(null);
+
+  const handleMouseDown = (e) => {
+    setIsMouseDown(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseDown(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsMouseDown(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 3;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   const bucketSize = {
     1: "scale(0.75)",
@@ -37,14 +64,21 @@ const ViewProducts = () => {
 
         <div className="container">
           <p
-            className="text-white text-md lg:text-lg xl:text-xl hover:text-[#F6B218] hover:cursor-pointer mt-10"
+            className="text-white ml-5 text-md lg:text-lg xl:text-xl hover:text-[#F6B218] hover:cursor-pointer mt-10"
             onClick={() => {
               navigate("/Products");
             }}
           >
             &larr; Products
           </p>
-          <div className="flex w-full overflow-auto space-x-20 scrollbar-hide">
+          <div
+            className="flex w-full overflow-auto space-x-20 scrollbar-hide"
+            ref={containerRef}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+          >
             {bucketInfo[productType].map((info, index) => (
               <div
                 className={`ml-10 relative mt-28 w-48 flex-shrink-0 p-3 rounded-lg`}
@@ -229,7 +263,9 @@ const ViewProducts = () => {
                       <p
                         className={`text-xs md:text-md lg:text-lg`}
                         style={{
-                          color: productInfo[productType].products[activeIndex].font_color
+                          color:
+                            productInfo[productType].products[activeIndex]
+                              .font_color,
                         }}
                       >
                         Color Range
@@ -244,7 +280,9 @@ const ViewProducts = () => {
                       <p
                         className={`font-normal text-[10px] lg:text-sm`}
                         style={{
-                          color: productInfo[productType].products[activeIndex].font_color
+                          color:
+                            productInfo[productType].products[activeIndex]
+                              .font_color,
                         }}
                       >
                         1000+
@@ -254,7 +292,9 @@ const ViewProducts = () => {
                       <p
                         className={`text-xs md:text-md lg:text-lg`}
                         style={{
-                          color: productInfo[productType].products[activeIndex].font_color
+                          color:
+                            productInfo[productType].products[activeIndex]
+                              .font_color,
                         }}
                       >
                         Finish
@@ -273,7 +313,10 @@ const ViewProducts = () => {
                           <p
                             className={`text-[7px] lg:text-xs`}
                             style={{
-                              color: finish.isActive? "white":  productInfo[productType].products[activeIndex].font_color
+                              color: finish.isActive
+                                ? "white"
+                                : productInfo[productType].products[activeIndex]
+                                    .font_color,
                             }}
                           >
                             {finish.text}
@@ -285,7 +328,9 @@ const ViewProducts = () => {
                       <p
                         className={`text-xs md:text-md lg:text-lg`}
                         style={{
-                          color: productInfo[productType].products[activeIndex].font_color
+                          color:
+                            productInfo[productType].products[activeIndex]
+                              .font_color,
                         }}
                       >
                         Toxicity
@@ -300,8 +345,10 @@ const ViewProducts = () => {
                       <p
                         className={`text-[10px] lg:text-sm font-[400] md:w-40`}
                         style={{
-                          color: productInfo[productType].products[activeIndex].font_color
-                        }}  
+                          color:
+                            productInfo[productType].products[activeIndex]
+                              .font_color,
+                        }}
                       >
                         Less toxic as there is no added lead, mercury, and
                         chromium. Low VOC.
@@ -311,25 +358,27 @@ const ViewProducts = () => {
                   <div className="">
                     <p className="pt-10">Available Packs</p>
                     <div className="flex mt-10 items-end">
-                      {Object.entries(bucketSize).map(([ltr, scaleVal], index) => {
-                        return (
-                          <div key={index} className="flex flex-col w-1/4">
-                            <img
-                              className={`object-bottom w-full`}
-                              style={{
-                                transform: scaleVal
-                              }}
-                              src={
-                                productInfo[productType].products[activeIndex]
-                                  .image
-                              }
-                            ></img>
-                            <p className="pt-4 text-xs md:text-base xl:text-lg md:pt-14">
-                              {ltr} ltr
-                            </p>
-                          </div>
-                        );
-                      })}
+                      {Object.entries(bucketSize).map(
+                        ([ltr, scaleVal], index) => {
+                          return (
+                            <div key={index} className="flex flex-col w-1/4">
+                              <img
+                                className={`object-bottom w-full`}
+                                style={{
+                                  transform: scaleVal,
+                                }}
+                                src={
+                                  productInfo[productType].products[activeIndex]
+                                    .image
+                                }
+                              ></img>
+                              <p className="pt-4 text-xs md:text-base xl:text-lg md:pt-14">
+                                {ltr} ltr
+                              </p>
+                            </div>
+                          );
+                        }
+                      )}
                     </div>
                   </div>
                 </React.Fragment>
