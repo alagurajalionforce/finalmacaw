@@ -56,16 +56,23 @@ const MyFooter = () => {
           </p>
         </div>
 
+        {/* The vertical line */}
+
+        <div className="hidden lg:block w-[2px] h-64 bg-white" />
+
         {/* Where to Buy */}
         <div className="w-full mt-8  md:flex lg:flex-col lg:mt-0 lg:w-2/6">
           <div className="md:w-1/2 lg:w-full">
             <h1 className="text-xl ">Where to Buy</h1>
+            <div className="flex my-3">
             <input
               type="text"
               name="place"
-              placeholder="City, State, zipcode"
-              class="mt-1 px-3 py-2 md:w-4/5 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+              placeholder="City, State or zipcode"
+              class="md:w-4/5 bg-white shadow-sm px-4 placeholder-slate-400 focus:outline-none rounded-l-full text-black  block w-full sm:text-sm"
             />
+            <button className="bg-[#F6B218] text-[#855E07] p-3 rounded-r-full">Go</button>
+            </div>
           </div>
 
           <div className="pt-6 md:pt-0">
