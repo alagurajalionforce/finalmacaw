@@ -81,7 +81,7 @@ const ViewProducts = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className=" border-2 border-b-slate-50 rounded-full w-10/12 mb-4 "></div>
+          <div className="mt-10 border-2 border-b-slate-50 rounded-full w-10/12 mb-4 "></div>
 
           <div
             className={`mt-12 p-6 mb-10 w-9/12 rounded-lg pb-16 text-center`}
@@ -99,8 +99,8 @@ const ViewProducts = () => {
                   src={productInfo[productType].products[activeIndex].bird}
                   className={
                     activeIndex % 2 == 0
-                      ? `absolute w-1/2 scale-x-[-1.25] scale-125 origin-top -left-1/4 -top-[18%] xl:scale-x-[-0.50] xl:scale-50 xl:-left-1/4 xl:-top-16 md:scale-x-[-0.50] md:scale-50 md:-left-1/4 md:-top-12`
-                      : `absolute w-3/12 scale-x-[-1.25] scale-125 origin-top -top-[30%] left-[10%] md:-left-[3%] md:-top-[15%] lg:-top-[18%] xl:scale-x-[-0.50] xl:scale-50 md:scale-x-[-0.50] md:scale-50 `
+                      ? `absolute w-1/2 scale-x-[-1.25] scale-125 origin-top -left-1/4 -top-[20%] xl:scale-x-[-0.50] xl:scale-50 xl:-left-1/4 xl:-top-16 md:scale-x-[-0.50] md:scale-50 md:-left-1/4 md:-top-12`
+                      : `absolute w-3/12 scale-x-[-1.25] scale-125 origin-top -top-[33%] left-[10%] md:-left-[3%] md:-top-[18%] lg:-top-[20%] xl:scale-x-[-0.50] xl:scale-50 md:scale-x-[-0.50] md:scale-50 `
                   }
                 />
                 {/* Bucket */}
@@ -235,7 +235,7 @@ const ViewProducts = () => {
                         Color Range
                       </p>
                       <img
-                        className="h-8 w-16"
+                        className="h-12 w-20"
                         src={
                           productInfo[productType].products[activeIndex]
                             .colorBar
