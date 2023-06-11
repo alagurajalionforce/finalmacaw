@@ -64,7 +64,7 @@ const ViewProducts = () => {
 
         <div className="container">
           <p
-            className="text-white text-md lg:text-lg xl:text-xl hover:text-[#F6B218] hover:cursor-pointer mt-10"
+            className="text-white text-md lg:text-lg xl:text-xl hover:text-[#F6B218] hover:cursor-pointer mt-10 ml-10"
             onClick={() => {
               navigate("/Products");
             }}
@@ -73,11 +73,11 @@ const ViewProducts = () => {
           </p>
           <div
             className="flex w-full overflow-auto space-x-20 scrollbar-hide"
-            // ref={containerRef}
-            // onMouseDown={handleMouseDown}
-            // onMouseLeave={handleMouseLeave}
-            // onMouseUp={handleMouseUp}
-            // onMouseMove={handleMouseMove}
+            ref={containerRef}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
           >
             {bucketInfo[productType].map((info, index) => (
               <div

@@ -333,3 +333,11 @@ width: 60%;
   line-height: 1.9;
 } 
 
+
+.our-story-div {
+  clip-path: polygon(100% 0, 100% 100%, 6% 86%, 0 14%);
+}
+
+.our-story-img-div {
+  clip-path: polygon(91% 11%, 100% 90%, 0 100%, 0 0);
+}
