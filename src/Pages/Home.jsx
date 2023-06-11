@@ -150,24 +150,6 @@ function Products() {
             ))}
             <div className="w-1/2 flex-shrink-0" />
           </div>
-          {/* <div
-            ref={snapContainerRef}
-            className="absolute -top-[100%] snap-x flex w-full overflow-auto scrollbar-hide"
-          >
-            <div className="w-1/2 flex-shrink-0" />
-            {homeBucketImages.map((homeBucket, index) => (
-              <div className="snap-center mt-28 flex-shrink-0 p-3 rounded-lg">
-                <img
-                  key={index}
-                  src={homeBucket.img}
-                  alt={`Image ${index}`}
-                  className={`transition-transform scale-75 duration-300 cursor-pointer`}
-                  onClick={() => handleImageClick(index)}
-                />
-              </div>
-            ))}
-            <div className="w-1/2 flex-shrink-0" />
-          </div> */}
         </div>
       </div>
       <div className="w-full flex justify-center mt-10">
