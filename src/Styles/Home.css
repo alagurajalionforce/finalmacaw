@@ -65,8 +65,7 @@
   .slider-close {
     height: 64px;
     background: linear-gradient(90deg, #ffffff 0%, #146ab0 100%);
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-radius: 40px;
     border-right: 40px;
     border-left: 40px;
     margin-top: -65px;

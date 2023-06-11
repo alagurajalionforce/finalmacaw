@@ -1,11 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../Styles/Home.css";
 import LivingRoom from "../Images/Home/Macaw-living-room 1.png";
 import MacawLogo from "../Images/Home/Macaw-Logo-masked 2.png";
 import AboutUs from "../Images/About Us/about_us_main.png";
+import ContactUsDiv from "../Components/ContactUsDiv";
+import Vector1 from "../Images/Home/Vector 1.png";
+import { homeBucketImages } from "../Components/ProductMetaData";
 
 function Products() {
   const [width, setWidth] = useState(0);
+  const [focusedIndex, setFocusedIndex] = useState(0);
+
+  const snapContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const container = snapContainerRef.current;
+      const scrollLeft = container.scrollLeft;
+      const scrollWidth = container.scrollWidth;
+
+      const snapIndex = Math.round(scrollLeft / (scrollWidth / (homeBucketImages.length - 1)));
+      console.log({snapIndex});
+      setFocusedIndex(snapIndex);
+    };
+
+    const container = snapContainerRef.current;
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleImageClick = (index) => {
+    setFocusedIndex(index);
+  };
 
   const handleWidth = (e) => {
     setWidth(e.target.value);
@@ -27,10 +56,21 @@ function Products() {
         }}
       />
       <div className="ml-44 mt-32 space-y-3">
-        <p className="text-white text-5xl">Add</p>
-        <img src={MacawLogo} className="h-16" />
-        <p className="text-white text-5xl">to your</p>
-        <p className="text-white text-7xl">life</p>
+        {width !== 100 ? (
+          <div className="h-64 space-y-3">
+            <p className="text-white text-5xl">Add</p>
+            <img src={MacawLogo} className="h-16" />
+            <p className="text-white text-5xl">to your</p>
+            <p className="text-white text-7xl">life</p>
+          </div>
+        ) : (
+          <div className="h-64 space-y-3">
+            <p className="text-white text-5xl">Explore the</p>
+            <p className="text-white text-5xl">Colors of</p>
+            <img src={MacawLogo} className="h-16" />
+            <p className="text-white text-7xl"></p>
+          </div>
+        )}
         <div className="slider">
           <input
             type="range"
@@ -48,6 +88,38 @@ function Products() {
         </div>
       </div>
       <img src={AboutUs} className="w-full mt-52" />
+      <div className="w-full text-center text-white">
+        <p className="text-2xl mb-2">Our Products</p>
+        <p className="font-thin">Swipe to see other products</p>
+        <div className="relative mt-28">
+          <img src={Vector1} className="mt-64" />
+          <img
+            className="absolute w-56 -top-[104%] left-[39%]"
+            src={homeBucketImages[focusedIndex].splash}
+          />
+          <div
+            ref={snapContainerRef}
+            className="absolute -top-[100%] snap-x flex w-full overflow-auto scrollbar-hide"
+          >
+            <div className="w-1/2 flex-shrink-0" />
+            {homeBucketImages.map((homeBucket, index) => (
+              <div className="snap-center mt-28 flex-shrink-0 p-3 rounded-lg">
+                <img
+                  key={index}
+                  src={homeBucket.img}
+                  alt={`Image ${index}`}
+                  className={`transition-transform scale-75 duration-300 cursor-pointer`}
+                  onClick={() => handleImageClick(index)}
+                />
+              </div>
+            ))}
+            <div className="w-1/2 flex-shrink-0" />
+          </div>
+        </div>
+      </div>
+      <div className="w-full flex justify-center mt-10">
+        <ContactUsDiv />
+      </div>
     </div>
   );
 }

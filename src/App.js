@@ -1,10 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Products from './Pages/Products';
 import Home from "./Pages/Home";
 import Colors from "./Pages/Colors";
-import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Blogs from "./Pages/Blogs";
 import Inspiration from "./Pages/Inspiration";

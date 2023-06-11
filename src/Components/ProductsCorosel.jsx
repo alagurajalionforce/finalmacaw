@@ -49,10 +49,6 @@ const ProductsCorosel = () => {
   return (
     <div>
       <div className="product-cor-con">
-        <p>Our Products</p>
-        <p style={{ fontWweight: 700, fontSize: '18px', color: 'black' }}>
-          Swipe to see other products
-        </p>
         <div
           className="product-cor-images"
           style={{

@@ -84,6 +84,20 @@ import Toxicity5 from "../Images/ToxicityLogo/Toxicity5.png";
 import Toxicity6 from "../Images/ToxicityLogo/Toxicity6.png";
 import Toxicity7 from "../Images/ToxicityLogo/Toxicity7.png";
 
+// Home Bucket Images
+import HomeBucket1 from "../Images/Home/Paint1.png"
+import HomeBucket2 from "../Images/Home/Paint2.png"
+import HomeBucket3 from "../Images/Home/Paint3.png"
+import HomeBucket4 from "../Images/Home/Paint4.png";
+import HomeBucket5 from "../Images/Home/Paint5.png";
+
+// Home Image Splashes
+import HomeSplash1 from "../Images/Home/Splash 1.png";
+import HomeSplash2 from "../Images/Home/Splash 2.png";
+import HomeSplash3 from "../Images/Home/Splash 3.png";
+import HomeSplash4 from "../Images/Home/Splash 4.png";
+import HomeSplash5 from "../Images/Home/Splash 5.png"; 
+
 const bucketInfo = {
   interior: [
     {
@@ -754,4 +768,27 @@ const productInfo = {
   },
 };
 
-export { bucketInfo, productInfo };
+const homeBucketImages = [
+  {
+    img: HomeBucket1,
+    splash: HomeSplash1
+  },
+  {
+    img: HomeBucket2,
+    splash: HomeSplash2
+  },
+  {
+    img: HomeBucket3,
+    splash: HomeSplash3
+  },
+  {
+    img: HomeBucket4,
+    splash: HomeSplash4
+  },
+  {
+    img: HomeBucket5,
+    splash: HomeSplash5
+  }
+]
+
+export { bucketInfo, productInfo, homeBucketImages };
