@@ -127,7 +127,7 @@ function Products() {
           <img src={Vector1} className="mt-64" />
           <img
             className="absolute w-56 -top-[104%] left-[39%]"
-            src={homeBucketImages[focusedIndex].splash}
+            src={homeBucketImages[focusedIndex]?.splash}
           />
           <div
             ref={snapContainerRef}
