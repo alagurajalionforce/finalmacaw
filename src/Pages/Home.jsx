@@ -12,23 +12,55 @@ function Products() {
   const [focusedIndex, setFocusedIndex] = useState(0);
 
   const snapContainerRef = useRef(null);
+  const activeImageRef = useRef(null);
+
+  const handleIntersection = (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        activeImageRef.current = entry.target;
+        setFocusedIndex(index === 0 ? 0 : index - 1); 
+      }
+    });
+  };
+
+  const handleScroll = () => {
+    const snapContainer = snapContainerRef.current;
+    const children = Array.from(snapContainer.children);
+
+    const visibleIndex = children.findIndex((child) => {
+      const rect = child.getBoundingClientRect();
+      return rect.left <= snapContainer.offsetWidth / 2 && rect.right >= snapContainer.offsetWidth / 2;
+    });
+
+    setFocusedIndex(visibleIndex === 0 ? 0 : visibleIndex - 1);
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const container = snapContainerRef.current;
-      const scrollLeft = container.scrollLeft;
-      const scrollWidth = container.scrollWidth;
-
-      const snapIndex = Math.round(scrollLeft / (scrollWidth / (homeBucketImages.length - 1)));
-      console.log({snapIndex});
-      setFocusedIndex(snapIndex);
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
     };
 
-    const container = snapContainerRef.current;
-    container.addEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (activeImageRef.current) {
+      observer.observe(activeImageRef.current);
+    }
 
     return () => {
-      container.removeEventListener("scroll", handleScroll);
+      if (activeImageRef.current) {
+        observer.unobserve(activeImageRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const snapContainer = snapContainerRef.current;
+    snapContainer.addEventListener('scroll', handleScroll);
+
+    return () => {
+      snapContainer.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -103,6 +135,27 @@ function Products() {
           >
             <div className="w-1/2 flex-shrink-0" />
             {homeBucketImages.map((homeBucket, index) => (
+              <div
+                ref={index === 0 ? activeImageRef : null}
+                className="snap-center mt-28 flex-shrink-0 p-3 rounded-lg"
+              >
+                <img
+                  key={index}
+                  src={homeBucket.img}
+                  alt={`Image ${index}`}
+                  className="transition-transform scale-75 duration-300 cursor-pointer"
+                  onClick={() => handleImageClick(index)}
+                />
+              </div>
+            ))}
+            <div className="w-1/2 flex-shrink-0" />
+          </div>
+          {/* <div
+            ref={snapContainerRef}
+            className="absolute -top-[100%] snap-x flex w-full overflow-auto scrollbar-hide"
+          >
+            <div className="w-1/2 flex-shrink-0" />
+            {homeBucketImages.map((homeBucket, index) => (
               <div className="snap-center mt-28 flex-shrink-0 p-3 rounded-lg">
                 <img
                   key={index}
@@ -114,7 +167,7 @@ function Products() {
               </div>
             ))}
             <div className="w-1/2 flex-shrink-0" />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="w-full flex justify-center mt-10">
