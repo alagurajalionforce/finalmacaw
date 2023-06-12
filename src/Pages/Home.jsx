@@ -150,6 +150,10 @@ function Products() {
             ))}
             <div className="w-1/2 flex-shrink-0" />
           </div>
+          <div className="absolute bottom-5 left-[43%] text-black text-center space-y-2">
+          <p>Amendo and Dura Fill</p>
+          <p>Interior primer</p>
+          </div>
         </div>
       </div>
       <div className="w-full flex justify-center mt-10">
