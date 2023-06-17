@@ -1,11 +1,10 @@
 import React from "react";
 import AboutUsBanner from "../Images/Banners/AboutUs.png";
-import AboutBird from "../Images/About Us/our-story-image.png";
 import Vision from "../Images/About Us/vision.png";
 import Mission from "../Images/About Us/mission.png";
-import AboutUsContent from "../Images/About Us/about_us_main.png";
-import WingImage from "../Images/About Us/WingImage.png";
+
 import "../Styles/About.css";
+import AboutUsInfo from "../Components/AboutUsInfo";
 
 function AboutUs() {
   const birdStyle = {
@@ -66,10 +65,8 @@ function AboutUs() {
           </div>
         </div> */}
 
-        <div className="w-full absolute -top-[4%] md:-top-[7%] lg:-top-[11%] xl:-top-[14%]">
-          <img src={AboutUsContent} className="w-full"></img>
-        </div>
-        <div className="flex justify-center items-center mt-36 md:mt-80 lg:mt-96 flex-wrap xl:mt-[32rem] 2xl:mt-[42rem] ">
+        <AboutUsInfo />
+        <div className="flex justify-center items-center mt-0 md:mt-0 lg:mt-96 flex-wrap xl:mt--[32rem] 2xl:mt-[42rem] ">
           <div className="relative w-full bg-white m-12 rounded-xl md:p-8 md:w-2/6 md:h-80 lg:h-96 lg:p-10 xl:h-[28rem] 2xl:h-[26rem] ">
             <img
               src={Vision}
