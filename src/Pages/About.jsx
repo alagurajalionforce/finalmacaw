@@ -7,64 +7,10 @@ import "../Styles/About.css";
 import AboutUsInfo from "../Components/AboutUsInfo";
 
 function AboutUs() {
-  const birdStyle = {
-    clipPath: "polygon(0% 0%, 180% 28%, 100% 82%, 0% 100%)",
-  };
-  const textStyle = {
-    clipPath: "polygon(0% 32%, 180% 0%, 100% 100%, 0% 90%)",
-  };
-
   return (
     <div className="flex flex-col w-full">
       <img src={AboutUsBanner} />
-      {/* <div className="w-full flex mt-10">
-        <div className="w-5/12 relative">
-          <div className="w-full h-full overflow-hidden relative">
-            <img src={WingImage} className="absolute -top-[27.5%] z-50 left-[9%]" />
-            <img
-              src={AboutBird}
-              className="w-full h-full object-cover our-story-img-div"
-              alt="About Bird"
-            />
-          </div>
-        </div>
-        <div className="w-[62%] bg-white flex justify-center items-center our-story-div absolute right-0 h-96">
-          <div className="w-5/6">
-            <p className="text-[#146AB0] text-3xl mb-5">Our Story</p>
-            <p className="leading-6 text-sm">
-              Introducing Macaw Paints - a brand that stands out from the rest.
-              Our dream is to decorate homes that exude success and boast
-              "flying colors." We took that vision quite literally, and realized
-              that every home deserves to flaunt a vibrant and eye-catching
-              exterior. Thus, Macaw Paints was born - named after the
-              illustriously colorful New World parrot. Our signature coat will
-              make your home shine with vibrancy, reflecting your
-              accomplishments and success to the world.
-            </p>
-          </div>
-        </div>
-      </div> */}
       <div className="flex-col h-auto relative">
-        {/* <div className="w-1/3 absolute top-[10.4rem] z-20">
-          <div className="relative">
-            <img src={AboutBird} style={birdStyle} className="block scale-125"  />
-          </div>
-        </div>
-        <div className="w-4/6 absolute top-[6rem] right-0">
-          <div className="relative">
-            <p className="absolute right-0 top-0 bg-white text-[8px] p-8 h-56" style={textStyle}>
-              Introducing Macaw Paints - a brand that stands out from the rest.
-              Our dream is to decorate homes that exude success and boast
-              "flying colors." We took that vision quite literally, and realized
-              that every home deserves to flaunt a vibrant and eye-catching
-              exterior. Thus, Macaw Paints was born - named after the
-              illustriously colorful New World parrot. Our signature coat will
-              make your home shine with vibrancy, reflecting your
-              accomplishments and success to the world.
-            </p>
-          </div>
-        </div> */}
-
         <AboutUsInfo />
         <div className="flex justify-center items-center mt-0 md:mt-0 lg:mt-96 flex-wrap xl:mt--[32rem] 2xl:mt-[42rem] ">
           <div className="relative w-full bg-white m-12 rounded-xl md:p-8 md:w-2/6 md:h-80 lg:h-96 lg:p-10 xl:h-[28rem] 2xl:h-[26rem] ">
