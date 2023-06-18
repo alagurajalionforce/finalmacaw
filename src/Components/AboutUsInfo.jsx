@@ -3,17 +3,14 @@ import AboutUsContent from "../Images/About Us/about_us_main.png";
 import AboutBirdCopy from "../Images/About Us/our-story-image copy.png";
 import WingImage from "../Images/About Us/WingImage.png";
 
-function AboutUsInfo() {
+function AboutUsInfo(props) {
   return (
     <div>
       {/* Mobile Version */}
-      <div className="flex bg-white visible md:invisible">
+      <div className="flex bg-white md:hidden">
         <div className="w-5/12 p-3 pl-0">
           <div className="rounded-xl mt-7 relative">
-          <img
-                src={WingImage}
-                className="absolute -top-[50%] left-[10%]"
-              />
+            <img src={WingImage} className="absolute -top-[50%] left-[10%]" />
             <img
               src={AboutBirdCopy}
               className="rounded-tr-lg rounded-br-lg"
@@ -37,9 +34,11 @@ function AboutUsInfo() {
         </div>
       </div>
       {/* Laptop Version */}
-      <div className="invisible md:visible w-full absolute -top-[4%] md:-top-[12%] lg:-top-[8%] xl:-top-[10%]">
-        <img src={AboutUsContent} className="w-full"></img>
-      </div>
+      {!props.mdNotVisible && (
+        <div className="hidden md:block w-full absolute -top-[4%] md:-top-[12%] lg:-top-[8%] xl:-top-[10%]">
+          <img src={AboutUsContent} className="w-full"></img>
+        </div>
+      )}
       ;
     </div>
   );

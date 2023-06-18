@@ -6,6 +6,7 @@ import AboutUs from "../Images/About Us/about_us_main.png";
 import ContactUsDiv from "../Components/ContactUsDiv";
 import Vector1 from "../Images/Home/Vector 1.png";
 import { homeBucketImages } from "../Components/ProductMetaData";
+import AboutUsInfo from "../Components/AboutUsInfo";
 
 function Products() {
   const [width, setWidth] = useState(0);
@@ -18,7 +19,7 @@ function Products() {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
         activeImageRef.current = entry.target;
-        setFocusedIndex(index === 0 ? 0 : index - 1); 
+        setFocusedIndex(index === 0 ? 0 : index - 1);
       }
     });
   };
@@ -87,20 +88,20 @@ function Products() {
           filter: `grayscale(${100 - width}%)`,
         }}
       />
-      <div className="ml-44 mt-32 space-y-3">
+      <div className="ml-20 md:ml-32 lg:ml-44 lg:mt-12 space-y-3">
         {width !== 100 ? (
-          <div className="h-64 space-y-3">
-            <p className="text-white text-5xl">Add</p>
-            <img src={MacawLogo} className="h-16" />
-            <p className="text-white text-5xl">to your</p>
-            <p className="text-white text-7xl">life</p>
+          <div className="h-28 lg:h-64 space-y-1 lg:space-y-3">
+            <p className="text-white text-xl lg:text-5xl">Add</p>
+            <img src={MacawLogo} className="h-9 lg:h-16" />
+            <p className="text-white text-xl lg:text-5xl">to your</p>
+            <p className="text-white text-3xl lg:text-7xl">life</p>
           </div>
         ) : (
-          <div className="h-64 space-y-3">
-            <p className="text-white text-5xl">Explore the</p>
-            <p className="text-white text-5xl">Colors of</p>
-            <img src={MacawLogo} className="h-16" />
-            <p className="text-white text-7xl"></p>
+          <div className="h-28 lg:h-64 space-y-1 lg:space-y-3">
+            <p className="text-white text-xl lg:text-5xl">Explore the</p>
+            <p className="text-white text-xl lg:text-5xl">Colors of</p>
+            <img src={MacawLogo} className="h-9 lg:h-16" />
+            <p className="text-white text-3xl lg:text-7xl"></p>
           </div>
         )}
         <div className="slider">
@@ -119,19 +120,20 @@ function Products() {
           </div>
         </div>
       </div>
-      <img src={AboutUs} className="w-full mt-52" />
+      <img src={AboutUs} className="hidden md:block w-full md:mt-32" />
+      <AboutUsInfo mdNotVisible />
       <div className="w-full text-center text-white">
-        <p className="text-2xl mb-2">Our Products</p>
-        <p className="font-thin">Swipe to see other products</p>
-        <div className="relative mt-28">
-          <img src={Vector1} className="mt-64" />
-          <img
-            className="absolute w-56 -top-[104%] left-[39%]"
-            src={homeBucketImages[focusedIndex]?.splash}
+        <p className="text-sm lg:text-2xl mb-2">Our Products</p>
+        <p className="text-xs font-thin">Swipe to see other products</p>
+        <div className="relative md:mt-40 lg:mt-96">
+        <img src={Vector1} className="mt-28 lg:mt-64 h-32 mr-0 md:h-40 lg:h-64" />
+        <img
+            className="absolute w-24 md:w-40 lg:w-72 -top-[70%] left-[35%] md:-top-[100%] md:left-[37%] lg:-top-[135%] lg:left-[32%] xl:-top-[140%] xl:left-[36%]"
+            src={homeBucketImages[focusedIndex]?.splash}            
           />
           <div
             ref={snapContainerRef}
-            className="absolute -top-[100%] snap-x flex w-full overflow-auto scrollbar-hide"
+            className="absolute -top-[110%] md:-top-[100%] snap-x flex w-full overflow-auto scrollbar-hide"
           >
             <div className="w-1/2 flex-shrink-0" />
             {homeBucketImages.map((homeBucket, index) => (
@@ -143,16 +145,16 @@ function Products() {
                   key={index}
                   src={homeBucket.img}
                   alt={`Image ${index}`}
-                  className="transition-transform scale-75 duration-300 cursor-pointer"
+                  className={`transition-transform w-48 md:w-72 lg:w-full duration-300 cursor-pointer`}
                   onClick={() => handleImageClick(index)}
                 />
               </div>
             ))}
             <div className="w-1/2 flex-shrink-0" />
           </div>
-          <div className="absolute bottom-5 left-[43%] text-black text-center space-y-2">
-          <p>Amendo and Dura Fill</p>
-          <p>Interior primer</p>
+          <div className="absolute bottom-2 left-[35%] md:left-[40%] text-xs lg:text-lg text-black text-center">
+            <p>Amendo and Dura Fill</p>
+            <p>Interior primer</p>
           </div>
         </div>
       </div>
