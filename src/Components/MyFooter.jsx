@@ -1,6 +1,7 @@
 import React from "react";
 
 import FooterLogo from "../Images/Footer/footer_logo.png";
+import FooterLogo2 from "../Images/Footer/footer_logo_2.png";
 
 // Support
 import SupportCall from "../Images/Footer/support_call.png";
@@ -17,8 +18,10 @@ import YouTube from "../Images/Footer/social_youtube.png";
 const MyFooter = () => {
   return (
     <div className="flex-col  bg-[#146AB0] p-10 pt-6 text-white lg:p-32 lg:pt-8 lg:pb-8">
-      <div className="w-full ">
+      <div className="w-full flex space-x-3 items-center">
         <img src={FooterLogo} className="pb-4 md:pb-4 w-24"></img>
+        <div className="w-px bg-white h-14" />
+        <img src={FooterLogo2} className="pb-4 md:pb-4 h-16"></img>
       </div>
       <div className="flex flex-wrap lg:justify-between">
         {/* Qucik Links */}
