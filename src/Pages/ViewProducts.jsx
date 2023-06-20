@@ -46,7 +46,6 @@ const ViewProducts = () => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
-    console.log("The type", queryParams.get("type"));
     setProductType(queryParams.get("type"));
   }, [location]);
 

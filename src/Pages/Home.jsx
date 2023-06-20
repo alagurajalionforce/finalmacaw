@@ -16,6 +16,32 @@ function Products() {
   const snapContainerRef = useRef(null);
   const activeImageRef = useRef(null);
 
+  // const [isMouseDown, setIsMouseDown] = useState(false);
+  // const [startX, setStartX] = useState(null);
+  // const [scrollLeft, setScrollLeft] = useState(null);
+
+  // const handleMouseDown = (e) => {
+  //   setIsMouseDown(true);
+  //   setStartX(e.pageX - snapContainerRef.current.offsetLeft);
+  //   setScrollLeft(snapContainerRef.current.scrollLeft);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsMouseDown(false);
+  // };
+
+  // const handleMouseUp = () => {
+  //   setIsMouseDown(false);
+  // };
+
+  // const handleMouseMove = (e) => {
+  //   if (!isMouseDown) return;
+  //   e.preventDefault();
+  //   const x = e.pageX - snapContainerRef.current.offsetLeft;
+  //   const walk = (x - startX) * 3;
+  //   snapContainerRef.current.scrollLeft = scrollLeft - walk;
+  // };
+
   const handleIntersection = (entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
@@ -122,7 +148,7 @@ function Products() {
           </div>
         </div>
       </div>
-      <img src={AboutUs} className="hidden md:block w-full md:mt-32" />
+      <img src={AboutUs} className="hidden md:block w-full md:mt-40 lg:mt-32 xl:mt-72" />
       <AboutUsInfo mdNotVisible />
       <div className="w-full text-center text-white">
         <p className="text-sm lg:text-2xl mb-2">Our Products</p>
@@ -135,6 +161,10 @@ function Products() {
           />
           <div
             ref={snapContainerRef}
+            // onMouseDown={handleMouseDown}
+            // onMouseLeave={handleMouseLeave}
+            // onMouseUp={handleMouseUp}
+            // onMouseMove={handleMouseMove}
             className="absolute -top-[110%] md:-top-[100%] snap-x flex w-full overflow-auto scrollbar-hide"
           >
             <div className="w-1/2 flex-shrink-0" />
