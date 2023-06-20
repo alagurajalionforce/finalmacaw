@@ -14,7 +14,7 @@ function AboutUs() {
       <img src={AboutUsBanner} />
       <div className="flex-col h-auto relative">
         <AboutUsInfo />
-        <div className="flex justify-center items-center mt-0 md:mt-0 lg:mt-96 flex-wrap xl:mt--[32rem] 2xl:mt-[42rem] ">
+        <div className="flex justify-center items-center mt-0 md:mt-64 lg:mt-[28rem] flex-wrap xl:mt--[40rem] 2xl:mt-[42rem] ">
           <div className="relative w-full bg-white m-12 rounded-xl md:p-8 md:w-2/6 md:h-80 lg:h-96 lg:p-10 xl:h-[28rem] 2xl:h-[26rem] ">
             <img
               src={Vision}

@@ -35,7 +35,7 @@ function AboutUsInfo(props) {
       </div>
       {/* Laptop Version */}
       {!props.mdNotVisible && (
-        <div className="hidden md:block w-full absolute -top-[4%] md:-top-[12%] lg:-top-[8%] xl:-top-[10%]">
+        <div className="hidden md:flex w-full absolute -top-[4%] md:-top-[11%] lg:-top-[10%] xl:-top-[13%]">
           <img src={AboutUsContent} className="w-full"></img>
         </div>
       )}
