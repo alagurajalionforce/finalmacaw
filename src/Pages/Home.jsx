@@ -7,6 +7,7 @@ import ContactUsDiv from "../Components/ContactUsDiv";
 import Vector1 from "../Images/Home/Vector 1.png";
 import { homeBucketImages } from "../Components/ProductMetaData";
 import AboutUsInfo from "../Components/AboutUsInfo";
+import StartJourneyButton from "../Components/StartJourneyButton";
 
 function Products() {
   const [width, setWidth] = useState(0);
@@ -80,6 +81,7 @@ function Products() {
 
   return (
     <div>
+      <StartJourneyButton />
       <img
         src={LivingRoom}
         className="absolute top-0 -z-50 w-full"

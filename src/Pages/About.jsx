@@ -5,10 +5,12 @@ import Mission from "../Images/About Us/mission.png";
 
 import "../Styles/About.css";
 import AboutUsInfo from "../Components/AboutUsInfo";
+import StartJourneyButton from "../Components/StartJourneyButton";
 
 function AboutUs() {
   return (
     <div className="flex flex-col w-full">
+      <StartJourneyButton />
       <img src={AboutUsBanner} />
       <div className="flex-col h-auto relative">
         <AboutUsInfo />

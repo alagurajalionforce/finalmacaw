@@ -8,11 +8,13 @@ import ppb3 from "../Images/Banners/Wood & Metal (2).png";
 import banner from "../Images/Banners/Products.png";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import StartJourneyButton from "../Components/StartJourneyButton";
 
 function Products() {
   const navigate = useNavigate();
   return (
     <React.Fragment>
+      <StartJourneyButton />
       <div className="relative">
         <img src={banner} />
       </div>

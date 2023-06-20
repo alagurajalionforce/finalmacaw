@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { productInfo, bucketInfo } from "../Components/ProductMetaData";
+import StartJourneyButton from "../Components/StartJourneyButton";
 
 const ViewProducts = () => {
   const [productType, setProductType] = useState("interior");
@@ -51,7 +52,8 @@ const ViewProducts = () => {
 
   return (
     <>
-      <div className="flex flex-col scal">
+    <StartJourneyButton />
+      <div className="flex flex-col">
         <div className="relative">
           <p className="absolute top-1/3 left-4  text-[#146AB0] font-light text-sm md:text-2xl lg:text-4xl">
             {productInfo[productType].title1}
