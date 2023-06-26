@@ -16,6 +16,10 @@ import LinkedIn from "../Images/Footer/social_linkedin.png";
 import YouTube from "../Images/Footer/social_youtube.png";
 
 const MyFooter = () => {
+  const navigate = (route) => {
+    window.location.href = route;
+  };
+
   return (
     <div className="flex-col  bg-[#146AB0] p-10 pt-6 text-white lg:p-32 lg:pt-8 lg:pb-8">
       <div className="w-full flex space-x-3 items-center">
@@ -27,31 +31,82 @@ const MyFooter = () => {
         {/* Qucik Links */}
         <div className="w-1/2 md:w-1/4 lg:w-1/6">
           <h1 className="text-lg pb-4">Quick Links</h1>
-          <p className="text-sm pb-1 font-light">About Us</p>
-          <p className="text-sm pb-1 font-light">Products</p>
-          <p className="text-sm pb-1 font-light">Contact Us</p>
+          <p
+            className="text-sm pb-1 font-light cursor-pointer"
+            onClick={() => {
+              navigate("/About");
+            }}
+          >
+            About Us
+          </p>
+          <p
+            className="text-sm pb-1 font-light cursor-pointer"
+            onClick={() => {
+              navigate("/Products");
+            }}
+          >
+            Products
+          </p>
+          <p
+            className="text-sm pb-1 font-light cursor-pointer"
+            onClick={() => {
+              navigate("/Contact");
+            }}
+          >
+            Contact Us
+          </p>
         </div>
         {/* Products */}
         <div className="w-1/2 md:w-1/4 lg:w-1/6">
           <h1 className="text-lg pb-4">Products</h1>
-          <p className="text-sm pb-1 font-light">Interior</p>
-          <p className="text-sm pb-1 font-light">Exterior</p>
-          <p className="text-sm pb-1 font-light">Wood & Metal</p>
+          <p
+            className="text-sm pb-1 font-light cursor-pointer"
+            onClick={() => {
+              navigate("/viewproducts?type=interior");
+            }}
+          >
+            Interior
+          </p>
+          <p
+            className="text-sm pb-1 font-light cursor-pointer"
+            onClick={() => {
+              navigate("/viewproducts?type=exterior");
+            }}
+          >
+            Exterior
+          </p>
+          <p
+            className="text-sm pb-1 font-light cursor-pointer"
+            onClick={() => {
+              navigate("/viewproducts?type=woodmetal");
+            }}
+          >
+            Wood & Metal
+          </p>
         </div>
         {/* Support */}
         <div className="w-full mt-8 md:w-1/2 md:mt-0 lg:w-1/4 lg:mr-4">
           <h1 className="text-lg pb-4 ">Support</h1>
           <div className="flex items-center">
             <img src={SupportCall} className="w-14 pr-4 lg:w-10 lg:pr-2"></img>
-            <p className="font-light text-sm lg:text-sm">Toll free - 1800 123 1003</p>
+            <p className="font-light text-sm lg:text-sm">
+              Toll free - 1800 123 1003
+            </p>
           </div>
           <div className="flex items-center">
-            <img src={SupportWhatsApp} className="w-14 pr-4 lg:w-10 lg:pr-2"></img>
-            <p className="font-light text-sm lg:text-sm">Whatsapp - 81005 56677</p>
+            <img
+              src={SupportWhatsApp}
+              className="w-14 pr-4 lg:w-10 lg:pr-2"
+            ></img>
+            <p className="font-light text-sm lg:text-sm">
+              Whatsapp - 81005 56677
+            </p>
           </div>
           <div className="flex items-center">
             <img src={SupportMail} className="w-14 pr-4 lg:w-10 lg:pr-2"></img>
-            <p className="font-light text-sm lg:text-sm">Email - help@macaw.com</p>
+            <p className="font-light text-sm lg:text-sm">
+              Email - help@macaw.com
+            </p>
           </div>
           <p className="pt-4 text-sm font-light">
             Premises no.03-319, DH-6/11, Action Area-1D, Street No. 319, New
@@ -68,13 +123,15 @@ const MyFooter = () => {
           <div className="md:w-1/2 lg:w-full">
             <h1 className="text-xl ">Where to Buy</h1>
             <div className="flex my-3">
-            <input
-              type="text"
-              name="place"
-              placeholder="City, State or zipcode"
-              class="md:w-4/5 bg-white shadow-sm px-4 placeholder-slate-400 focus:outline-none rounded-l-full text-black  block w-full sm:text-sm"
-            />
-            <button className="bg-[#F6B218] text-[#855E07] p-3 rounded-r-full">Go</button>
+              <input
+                type="text"
+                name="place"
+                placeholder="City, State or zipcode"
+                class="md:w-4/5 bg-white shadow-sm px-4 placeholder-slate-400 focus:outline-none rounded-l-full text-black  block w-full sm:text-sm"
+              />
+              <button className="bg-[#F6B218] text-[#855E07] p-3 rounded-r-full">
+                Go
+              </button>
             </div>
           </div>
 
